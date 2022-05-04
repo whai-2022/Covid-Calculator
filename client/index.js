@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     },
   })
-  
+
   render(
     <Provider store={store}>
       <ChakraProvider theme={theme}>
