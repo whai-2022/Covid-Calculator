@@ -11,12 +11,6 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import Auth0Login from './Auth0Login'
 
-// Note: This code could be better,
-// so I'd recommend you to understand how I solved and you could write yours better :
-// Good luck! 🍀
-
-// Update: Check these awesome headers from Choc UI 👇
-// https://choc-ui.tech/docs/elements/headers
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const handleToggle = () => (isOpen ? onClose() : onOpen())
@@ -49,11 +43,11 @@ function Navbar() {
         flexGrow={1}
         mt={{ base: 4, md: 0 }}
       >
-        <Text>Home</Text>
+        <Text fontSize='xl' ><a href='http://localhost:3000/'>Home</a></Text>
         <Text></Text>
         <Text></Text>
       </Stack>
-
+      
       <Box
         display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
         mt={{ base: 4, md: 0 }}

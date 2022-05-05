@@ -27,11 +27,12 @@ const Login = () => {
           <Button onClick={handleSignOut} colorScheme="teal" m={2}>
             Sign Out
           </Button>
+          
           <img src={user.picture} className="avatar" />
         </>
       ) : (
-        <Button onClick={handleSignIn} colorScheme="teal" m={2}>
-          Sign In
+        <Button onClick={handleSignIn} variant="outline" _hover={{ bg: "teal.600", borderColor: "teal.600", color: "white" }} colorScheme="teal" m={2}>
+         Business Sign In
         </Button>
       )}
     </div>
