@@ -1,14 +1,15 @@
 import React from 'react'
 import Navbar from './Navbar'
+import BusinessListingPage from './BusinessListingPage'
 
 function App() {
   return (
     <>
       <Navbar />
-      <header className="header">
-        <h1>My Collection</h1>
-      </header>
-      <section className="main">{/* add your code here */}</section>
+      <header className="header"></header>
+      <section className="main">
+        <BusinessListingPage />
+      </section>
     </>
   )
 }
