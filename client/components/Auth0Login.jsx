@@ -16,13 +16,6 @@ const Login = () => {
 
   return (
     <div className="login">
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
-      </nav>
       {isAuthenticated && (
         <p
           aria-label="login message"
