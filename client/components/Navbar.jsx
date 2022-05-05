@@ -5,7 +5,6 @@ import {
   Heading,
   Flex,
   Text,
-  Button,
   useDisclosure,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
@@ -43,11 +42,13 @@ function Navbar() {
         flexGrow={1}
         mt={{ base: 4, md: 0 }}
       >
-        <Text fontSize='xl' ><a href='http://localhost:3000/'>Home</a></Text>
+        <Text fontSize="xl">
+          <a href="http://localhost:3000/">Home</a>
+        </Text>
         <Text></Text>
         <Text></Text>
       </Stack>
-      
+
       <Box
         display={{ base: isOpen ? 'block' : 'none', md: 'block' }}
         mt={{ base: 4, md: 0 }}
