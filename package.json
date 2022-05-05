@@ -16,7 +16,8 @@
     "dev:server": "nodemon --watch server server/index.js",
     "webpack": "webpack --config ./client/webpack.config.js",
     "knex": "knex --knexfile ./server/db/knexfile.js",
-    "lint": "eslint --ext .js,.jsx ."
+    "lint": "eslint --ext .js,.jsx .",
+    "prettier": "prettier --write server client"
   },
   "keywords": [
     "fullstack"
@@ -49,10 +50,11 @@
     "@babel/core": "^7.12.16",
     "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/plugin-proposal-object-rest-spread": "^7.12.13",
-    "@babel/plugin-transform-runtime": "^7.13.1",
+    "@babel/plugin-transform-runtime": "^7.17.10",
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
-    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/dom": "^8.13.0",
+    "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
     "babel-loader": "^8.2.2",
@@ -80,19 +82,23 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^1.10.1",
+    "@chakra-ui/icons": "^1.1.7",
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
     "@vscode/sqlite3": "^5.0.7",
     "express": "^4.17.1",
+    "express-jwt": "^6.1.0",
+    "express-jwt-authz": "^2.4.1",
     "framer-motion": "^6.3.3",
+    "jwks-rsa": "^2.1.0",
     "knex": "^1.0.1",
     "knex-postgis": "^0.14.3",
     "pg": "^8.5.1",
-    "superagent": "^6.1.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "superagent": "^6.1.0"
   },
   "prettier": {
     "semi": false,
