@@ -3,7 +3,7 @@ const router = express.Router()
 
 const db = require('../db/business')
 
-router.get('/', (req, res) => {
+router.get('/:id', (req, res) => {
   db.getBusinessById(req.params.id)
     .then((business) => {
       res.json(business)

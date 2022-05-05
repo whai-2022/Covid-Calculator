@@ -6,8 +6,8 @@ module.exports = {
 
 function getBusinessById(id, db = connection) {
   return db('businesses')
-    .where('id', id)
+    .where('businesses.id', id)
     .join('safetyCriteria', 'businesses.id', 'safetyCriteria.business_id')
-    .select('safteyCriteria.*', 'businesses.*')
+    .select('safetyCriteria.*', 'businesses.*')
     .first()
 }
