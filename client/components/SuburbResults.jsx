@@ -1,5 +1,6 @@
 import React from 'react'
-// import api from '../apis'
+
+import BusinessList from './BusinessList'
 
 function SuburbResults() {
   return (
