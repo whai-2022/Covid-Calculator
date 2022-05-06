@@ -1,14 +1,20 @@
 import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+
 import Navbar from './Navbar'
+import SearchPage from './SearchPage'
 
 function App() {
   return (
     <>
       <Navbar />
-      <header className="header">
-        <h1>My Collection</h1>
-      </header>
-      <section className="main">{/* add your code here */}</section>
+      <Routes>
+        <Route path="/" element={'home'}></Route>
+        <Route path="businesses/:id" element={'business'}></Route>
+        <Route path="cities" element={'cities'}></Route>
+        <Route path="cities/:city" element={'city'}></Route>
+        <Route path="cities/:city/:suburb" element={<SearchPage />}></Route>
+      </Routes>
     </>
   )
 }
