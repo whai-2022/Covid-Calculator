@@ -9,11 +9,15 @@ function App() {
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={'home'}></Route>
-        <Route path="businesses/:id" element={'business'}></Route>
-        <Route path="cities" element={'cities'}></Route>
-        <Route path="cities/:city" element={'city'}></Route>
-        <Route path="cities/:city/:suburb" element={<SearchPage />}></Route>
+        <Route exact path="/" element={'home'}></Route>
+        <Route exact path="businesses/:id" element={'business'}></Route>
+        <Route exact path="cities" element={'cities'}></Route>
+        <Route exact path="cities/:city" element={'city'}></Route>
+        <Route
+          exact
+          path="cities/:city/:suburb"
+          element={<SearchPage />}
+        ></Route>
       </Routes>
     </>
   )
