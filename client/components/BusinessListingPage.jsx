@@ -1,6 +1,15 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Box, Stack, Heading, Flex, Text } from '@chakra-ui/react'
+import { useParams } from 'react-router-dom'
+import {
+  Box,
+  Stack,
+  Heading,
+  Flex,
+  Text,
+  UnorderedList,
+  ListItem,
+} from '@chakra-ui/react'
 
 import { fetchBusiness } from '../actions'
 // get business info from database
@@ -24,11 +33,12 @@ import { fetchBusiness } from '../actions'
 
 function BusinessListingPage() {
   const dispatch = useDispatch()
+  const { id } = useParams
 
   const business = useSelector((state) => state.business)
 
   useEffect(() => {
-    dispatch(fetchBusiness(1))
+    dispatch(fetchBusiness(2))
   }, [])
 
   console.log(business)
@@ -40,7 +50,26 @@ function BusinessListingPage() {
           Business page{' '}
         </Heading>
       </Flex>{' '}
-      {business.name}
+      <Box display={{ base: 'block' }} m={5}>
+        <Text>Business info:</Text>
+        <UnorderedList>
+          <ListItem>{business.name}</ListItem>
+          <ListItem>{business.category}</ListItem>
+          <ListItem>{business.address}</ListItem>
+        </UnorderedList>
+      </Box>
+      <Box display={{ base: 'block' }} m={5}>
+        <Text>Safety info:</Text>
+        <UnorderedList>
+          <ListItem>cleaningProtocol: {business.cleaningProtocol}</ListItem>
+          <ListItem>handSanitizer: {business.handSanitizer}</ListItem>
+          <ListItem>masking: {business.masking}</ListItem>
+          <ListItem>minSpacing: {business.minSpacing}</ListItem>
+          <ListItem>vaccinePass: {business.vaccinePass}</ListItem>
+          <ListItem>vaccineStaff: {business.vaccineStaff}</ListItem>
+          <ListItem>ventilation: {business.ventilation}</ListItem>
+        </UnorderedList>
+      </Box>
     </>
   )
 }
