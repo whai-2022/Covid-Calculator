@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 
 import Navbar from './Navbar'
 import BusinessListingPage from './BusinessListingPage'
-import SearchPage from './SearchPage'
+import SuburbResults from './SuburbResults'
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Route
           exact
           path="cities/:city/:suburb"
-          element={<SearchPage />}
+          element={<SuburbResults />}
         ></Route>
       </Routes>
     </>
