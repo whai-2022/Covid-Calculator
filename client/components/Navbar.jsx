@@ -29,7 +29,6 @@ function Navbar() {
           Covid Calculator
         </Heading>
       </Flex>
-
       <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>
         <HamburgerIcon />
       </Box>
