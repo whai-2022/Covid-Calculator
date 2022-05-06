@@ -11,7 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={'home'}></Route>
-        <Route path="businesses/:id" element={'business'}></Route>
+        <Route path="businesses/:id" element={<BusinessListingPage />}></Route>
         <Route path="cities" element={'cities'}></Route>
         <Route path="cities/:city" element={'city'}></Route>
         <Route path="cities/:city/:suburb" element={<SearchPage />}></Route>
