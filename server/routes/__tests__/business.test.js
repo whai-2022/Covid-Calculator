@@ -1,8 +1,8 @@
 const request = require('supertest')
 const server = require('../../server')
-const db = require('../../db/business')
+const db = require('../../db')
 
-jest.mock('../../db/business')
+jest.mock('../../db')
 
 import { testBusiness } from '../../../__mockData__/business'
 
