@@ -5,9 +5,12 @@ import { Container, Box } from '@chakra-ui/react'
 import Navbar from './Navbar'
 import HomeSplash from './HomeSplash'
 import BusinessListingPage from './BusinessListingPage'
+
 import CitiesSuburbs from './CitiesSuburbs'
 import SearchPage from './SearchPage'
 import Footer from './Footer'
+import MapContainer from './MapContainer'
+import SuburbResults from './SuburbResults'
 
 function App() {
   return (
