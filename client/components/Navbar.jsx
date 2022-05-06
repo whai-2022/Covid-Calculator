@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import Auth0Login from './Auth0Login'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -29,7 +30,6 @@ function Navbar() {
           Covid Calculator
         </Heading>
       </Flex>
-
       <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>
         <HamburgerIcon />
       </Box>
@@ -43,9 +43,11 @@ function Navbar() {
         mt={{ base: 4, md: 0 }}
       >
         <Text fontSize="xl">
-          <a href="http://localhost:3000/">Home</a>
+          <Link to="/">Home</Link>
         </Text>
-        <Text></Text>
+        <Text fontSize="xl">
+          <Link to="cities">Cities</Link>
+        </Text>
         <Text></Text>
       </Stack>
 

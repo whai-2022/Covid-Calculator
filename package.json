@@ -94,10 +94,11 @@
     "jwks-rsa": "^2.1.0",
     "knex": "^1.0.1",
     "knex-postgis": "^0.14.3",
+    "nock": "^13.2.4",
     "pg": "^8.5.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
+    "react-router-dom": "^6.3.0",
     "superagent": "^6.1.0"
   },
   "prettier": {

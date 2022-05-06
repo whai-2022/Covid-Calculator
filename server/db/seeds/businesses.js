@@ -14,6 +14,8 @@ exports.seed = async function (knex) {
       category: 'Hairdressers',
       reliabilityScore: 4,
       rating: 80,
+      suburb: 'Grey Lynn',
+      city: 'Auckland',
     },
     {
       id: 2,
@@ -23,6 +25,8 @@ exports.seed = async function (knex) {
       category: 'Hardware store',
       reliabilityScore: 10,
       rating: 88,
+      suburb: 'Grey Lynn',
+      city: 'Auckland',
     },
     {
       id: 3,
@@ -32,6 +36,8 @@ exports.seed = async function (knex) {
       category: 'Optometrist',
       reliabilityScore: 4,
       rating: 90,
+      suburb: 'Grey Lynn',
+      city: 'Auckland',
     },
     {
       id: 4,
@@ -41,6 +47,8 @@ exports.seed = async function (knex) {
       category: 'Cafe',
       reliabilityScore: 20,
       rating: 98,
+      suburb: 'Grey Lynn',
+      city: 'Auckland',
     },
     {
       id: 5,
@@ -50,6 +58,8 @@ exports.seed = async function (knex) {
       category: 'Dentist',
       reliabilityScore: 66,
       rating: 50,
+      suburb: 'Grey Lynn',
+      city: 'Auckland',
     },
     {
       id: 6,
@@ -59,6 +69,8 @@ exports.seed = async function (knex) {
       category: 'Cafe',
       reliabilityScore: 4,
       rating: 67,
+      suburb: 'Grey Lynn',
+      city: 'Auckland',
     },
   ])
 }
