@@ -1,0 +1,17 @@
+export const testBusiness = {
+  address: '123 lane rd, Grey Lynn, Auckland',
+  auth0_ID: '1',
+  business_id: '1',
+  category: 'Hairdressers',
+  cleaningProtocol: 1,
+  handSanitizer: 1,
+  id: 1,
+  masking: 1,
+  minSpacing: 1,
+  name: 'Sharons Hairdressing',
+  rating: 80,
+  reliabilityScore: 4,
+  vaccinePass: 1,
+  vaccineStaff: 1,
+  ventilation: 1,
+}
