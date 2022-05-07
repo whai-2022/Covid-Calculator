@@ -5,7 +5,6 @@ const router = express.Router()
 router.get('/', (req, res) => {
   db.getBusinesses()
     .then((businesses) => {
-      console.log(businesses)
       res.json(businesses)
       return null
     })
