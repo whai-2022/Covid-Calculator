@@ -3,12 +3,9 @@ import { Routes, Route } from 'react-router-dom'
 
 import Navbar from './Navbar'
 import BusinessListingPage from './BusinessListingPage'
-<<<<<<< HEAD
 import SearchPage from './SearchPage'
 import MapContainer from './MapContainer'
-=======
 import SuburbResults from './SuburbResults'
->>>>>>> 2888980 (list map half working)
 
 function App() {
   return (
