@@ -13,7 +13,7 @@ function BusinessList() {
   console.log(formatLocationName(suburb)) // all good, grey-lynn
 
   const allBusinesses = useSelector((state) => state.businesses)
-  console.log(allBusinesses) // Undefined
+  console.log('allBusinesses from BusinessList', allBusinesses) // Undefined
 
   useEffect(() => {
     dispatch(getBusinesses())
@@ -24,6 +24,8 @@ function BusinessList() {
       formatLocationName(el.city) == formatLocationName(city) &&
       formatLocationName(el.suburb) == formatLocationName(suburb)
   )
+
+  console.log('businesses from BusinessList', businesses) // Undefined
 
   return (
     <>
@@ -36,6 +38,7 @@ function BusinessList() {
             category={business.category}
             reliabilityScore={business.reliabilityScore}
             rating={business.rating}
+            id={business.id}
           />
         ))}
       </div>

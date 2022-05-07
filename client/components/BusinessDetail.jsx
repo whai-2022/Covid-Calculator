@@ -20,13 +20,15 @@ function BusinessDetail({
         </Text>
         <Text mt={2}>{address}</Text>
         <Text mt={2}>{category}</Text>
-        <Text mt={2}>{reliabilityScore}</Text>
+        <Text mt={2}>Reliability Score {reliabilityScore}</Text>
         <Flex mt={2} align="center">
           {/* <Box as={MdStar} color="orange.400" /> */}
           <Text ml={1} fontSize="sm">
-            <b>{rating}</b> (190)
+            <b>Rating {rating}</b>
           </Text>
-          <Link to={`/businesses/${id}/`}>Details</Link>
+          <Text ml={1} fontSize="sm">
+            <Link to={`/businesses/${id}/`}>Details</Link>
+          </Text>
         </Flex>
       </Box>
     </Center>
