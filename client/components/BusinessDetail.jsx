@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 
-import { Box, Center, Flex, Text } from '@chakra-ui/react'
+import { Heading, Box, Center, Flex, Text } from '@chakra-ui/react'
 // import { MdStar } from 'react-icons/md'
 
 function BusinessDetail({
@@ -15,9 +15,12 @@ function BusinessDetail({
   return (
     <Center h="100vh">
       <Box p="5" maxW="320px" borderWidth="1px">
-        <Text mt={2} fontSize="xl" fontWeight="semibold" lineHeight="short">
+        {/* <Text mt={2} fontSize="xl" fontWeight="semibold" lineHeight="short">
+          
+        </Text> */}
+        <Heading as="h2" size="3xl">
           {name}
-        </Text>
+        </Heading>
         <Text mt={2}>{address}</Text>
         <Text mt={2}>{category}</Text>
         <Text mt={2}>Reliability Score {reliabilityScore}</Text>
