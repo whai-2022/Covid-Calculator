@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Heading } from '@chakra-ui/react'
 
 import BusinessList from './BusinessList'
-import Map from './Map'
+import MapContainer from './MapContainer'
 
 function SuburbResultsPage() {
   const { city, suburb } = useParams()
@@ -22,7 +22,7 @@ function SuburbResultsPage() {
       <Heading as="h1" size="lg" letterSpacing={'tighter'}>
         Listings for {formatLocationName(suburb)}, {formatLocationName(city)}
       </Heading>
-      <Map />
+      <MapContainer />
       <BusinessList />
     </>
   )
