@@ -16,7 +16,6 @@ function getBusinesses(db = connection) {
       'city'
     )
     .then((businesses) => {
-      console.log(businesses)
       return businesses.map((business) => {
         return {
           ...business,
