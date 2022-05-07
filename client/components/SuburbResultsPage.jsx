@@ -3,7 +3,7 @@ import React from 'react'
 import BusinessList from './BusinessList'
 import Map from './Map'
 
-function SuburbResults() {
+function SuburbResultsPage() {
   return (
     <>
       <Map />
@@ -12,4 +12,4 @@ function SuburbResults() {
   )
 }
 
-export default SuburbResults
+export default SuburbResultsPage
