@@ -4,6 +4,8 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './Navbar'
 import BusinessListingPage from './BusinessListingPage'
 import SuburbResultsPage from './SuburbResultsPage'
+import SearchPage from './SearchPage'
+import MapContainer from './MapContainer'
 
 function App() {
   return (
