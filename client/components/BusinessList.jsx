@@ -10,10 +10,8 @@ function BusinessList() {
   const { city, suburb } = useParams()
   const formatLocationName = (locationName) =>
     locationName.replace(/\s/g, '-').toLowerCase()
-  console.log(formatLocationName(suburb)) // all good, grey-lynn
 
   const allBusinesses = useSelector((state) => state.businesses)
-  console.log('allBusinesses from BusinessList', allBusinesses) // Undefined
 
   useEffect(() => {
     dispatch(getBusinesses())
@@ -24,8 +22,6 @@ function BusinessList() {
       formatLocationName(el.city) == formatLocationName(city) &&
       formatLocationName(el.suburb) == formatLocationName(suburb)
   )
-
-  console.log('businesses from BusinessList', businesses) // Undefined
 
   return (
     <>
