@@ -10,7 +10,6 @@ function App() {
   return (
     <>
       <Navbar />
-      <MapContainer />
       <Routes>
         <Route exact path="/" element={'home'}></Route>
         <Route
