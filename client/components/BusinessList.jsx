@@ -9,7 +9,7 @@ function BusinessList() {
   const dispatch = useDispatch()
   const { city, suburb } = useParams()
   const formatLocationName = (locationName) =>
-    locationName.replace(/\s/g, '-').toLowerCase()
+    locationName?.replace(/\s/g, '-').toLowerCase()
 
   const allBusinesses = useSelector((state) => state.businesses)
 
@@ -17,11 +17,12 @@ function BusinessList() {
     dispatch(getBusinesses())
   }, [])
 
-  const businesses = allBusinesses.filter(
-    (el) =>
+  const businesses = allBusinesses.filter((el) => {
+    return (
       formatLocationName(el.city) == formatLocationName(city) &&
       formatLocationName(el.suburb) == formatLocationName(suburb)
-  )
+    )
+  })
 
   return (
     <>

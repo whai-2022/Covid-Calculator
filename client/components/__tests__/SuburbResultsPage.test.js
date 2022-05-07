@@ -5,6 +5,8 @@ import { screen, render } from '@testing-library/react'
 import SuburbResultsPage from '../SuburbResultsPage'
 import { testBusinesses } from '../../../__mockData__/businesses'
 
+// jest.mock('../../index.js')
+
 const fakeStore = {
   subscribe: jest.fn(),
   getState: jest.fn(() => {
@@ -14,16 +16,20 @@ const fakeStore = {
 }
 
 describe('<SuburbResultsPage />', () => {
-  it('renders the h1 title', () => {
+  it('renders the h2 title', () => {
     render(
       <Provider store={fakeStore}>
         <SuburbResultsPage />
       </Provider>
     )
     expect.assertions(2)
+    // const businessNames = screen.getAllByRole('heading')
+    // expect(businessNames[0].textContent).toContain('Sharons Hairdressing')
+    // expect(businessNames).toHaveLength(6)
+
     expect(screen.getByRole('heading')).toHaveTextContent(
-      'Sharons Hairdressing'
+      'Listings for Grey Lynn'
     )
-    expect(screen.getByRole('heading')).not.toHaveTextContent('brisket')
+    expect(screen.getByRole('heading')).not.toHaveTextContent('Weird No Words')
   })
 })
