@@ -1,5 +1,5 @@
 import React from 'react'
-import Map, { Marker } from 'react-map-gl'
+import { Map, Marker } from 'react-map-gl'
 import mapboxgl from 'mapbox-gl'
 import * as turf from '@turf/turf'
 
