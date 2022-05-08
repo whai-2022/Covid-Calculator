@@ -17,7 +17,7 @@ jest.mock('mapbox-gl/dist/mapbox-gl.css', () => ({
 describe('<MapContainer />', () => {
   it('renders the map container', async () => {
     jest.spyOn(console, 'error').mockImplementation()
-    await render(<MapContainer />)
+    await render(<MapContainer w="100%" location={[0, 0]} />)
     expect(screen.getByLabelText('map')).toBeInTheDocument()
   })
 
