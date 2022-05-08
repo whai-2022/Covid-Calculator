@@ -31,7 +31,7 @@ function MapContainer({ location }) {
   }
 
   const onMapLoad = React.useCallback(() => {
-    console.log(checkIfPositionInViewport(-36.860181, 174.738057))
+    // console.log(checkIfPositionInViewport(-36.860181, 174.738057))
   }, [])
 
   const onMapMove = React.useCallback(({ viewState }) => {
