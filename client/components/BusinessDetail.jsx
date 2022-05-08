@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Link } from 'react-router-dom'
 
 import { Heading, Box, Center, Flex, Text } from '@chakra-ui/react'
-// import { MdStar } from 'react-icons/md'
+import { MdStar } from 'react-icons/md'
 
 function BusinessDetail({
   id,
@@ -25,7 +25,7 @@ function BusinessDetail({
         <Text mt={2}>{category}</Text>
         <Text mt={2}>Reliability Score {reliabilityScore}</Text>
         <Flex mt={2} align="center">
-          {/* <Box as={MdStar} color="orange.400" /> */}
+          <Box as={MdStar} color="orange.400" />
           <Text ml={1} fontSize="sm">
             <b>Rating {rating}</b>
           </Text>
