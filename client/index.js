@@ -31,6 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   })
 
+  // TODO: Since we have two other "providers" in scope, it might help to import this differently to
+  // make the name unambiguous, e.g:
+  //
+  //   import { Provider as ReduxProvider } from 'react-redux'
+  //
+  //   return (<ReduxProvider>...</ReduxProvider>)
+  //
+  // or use it qualified like this
+  //
+  //   import ReactRedux as * from 'react-redux'
+  //
+  //   return (<ReactRedux.Provider>...</ReactRedux.Provider>)
+  //
   render(
     <Provider store={store}>
       <BrowserRouter>

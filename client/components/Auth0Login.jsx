@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import { Button, Image, Stack, Text, HStack } from '@chakra-ui/react'
+// TODO: please don't leave commented code in your code, how will I ever know to uncomment it?
 // import { Link } from 'react-router-dom'
 
 const Login = () => {

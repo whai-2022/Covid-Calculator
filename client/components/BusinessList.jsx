@@ -24,6 +24,11 @@ function BusinessList() {
     )
   })
 
+  // TODO: what does the empty state of this look like? Can the user distinguish between:
+  //  1. There are no businesses in this location
+  //  2. There are no businesses in the world!
+  //  3. There might be businesses, I'm waiting for them to load
+  //  4. I tried loading businesses, but it failed
   return (
     <>
       {businesses.map((business) => (

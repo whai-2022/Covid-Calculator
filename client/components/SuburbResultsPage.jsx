@@ -22,6 +22,7 @@ function SuburbResultsPage() {
   }
 
   useEffect(() => {
+    // TODO: this mix of `.then` and await is confusing to read, I encourage you to pick a lane
     api
       .fetchCoordinates(
         `${formatLocationName(suburb)}, ${formatLocationName(city)}`
@@ -30,6 +31,7 @@ function SuburbResultsPage() {
         await setLocation(res.features[0].center)
       })
       .catch((err) => {
+        // TODO: same comment I made elsewhere, please do something with your errors that benefits the users
         console.error(err)
       })
   }, [])

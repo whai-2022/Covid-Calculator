@@ -18,6 +18,7 @@ export function fetchBusiness(id) {
         return null
       })
       .catch((err) => {
+        // TODO: How will the user know what is happening
         console.log(err)
       })
   }

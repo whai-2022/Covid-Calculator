@@ -1,5 +1,7 @@
 # TODO App
 
+TODO: It's a small thing, but I start reading a project at the README and there's not much here about Covid-Calculator
+
 ```
 npm install
 git checkout -b <branchname>
