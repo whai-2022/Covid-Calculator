@@ -1,5 +1,7 @@
 # Node modules
 node_modules
+node_modules*.*
+vendors-node_modules*.*
 
 # Logs
 *.log
