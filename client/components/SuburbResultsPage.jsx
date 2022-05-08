@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { Heading } from '@chakra-ui/react'
+import { Heading, Flex, Box } from '@chakra-ui/react'
 
 import BusinessList from './BusinessList'
 import MapContainer from './MapContainer'
@@ -19,11 +19,24 @@ function SuburbResultsPage() {
 
   return (
     <>
-      <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+      <Heading
+        as="h1"
+        size="lg"
+        mb="10"
+        letterSpacing={'tighter'}
+        textAlign="center"
+        color="gray.700"
+      >
         Listings for {formatLocationName(suburb)}, {formatLocationName(city)}
       </Heading>
-      <MapContainer />
-      <BusinessList />
+      <Flex justifyContent="space-evenly">
+        <Box colSpan={2} justifyItems={'center'}>
+          <MapContainer w="100%" />
+        </Box>
+        <Box>
+          <BusinessList />
+        </Box>
+      </Flex>
     </>
   )
 }
