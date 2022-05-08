@@ -1,7 +1,7 @@
 import * as businessApi from './business'
-import * as businesses from './businesses'
+import * as businessesApi from './businesses'
 
 export default {
   ...businessApi,
-  ...businesses,
+  ...businessesApi,
 }

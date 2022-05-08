@@ -5,8 +5,8 @@ import { Container, Box } from '@chakra-ui/react'
 import Navbar from './Navbar'
 import HomeSplash from './HomeSplash'
 import BusinessListingPage from './BusinessListingPage'
+import SuburbResultsPage from './SuburbResultsPage'
 import CitiesSuburbs from './CitiesSuburbs'
-import SearchPage from './SearchPage'
 import Footer from './Footer'
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
               <Route
                 exact
                 path="cities/:city/:suburb"
-                element={<SearchPage />}
+                element={<SuburbResultsPage />}
               ></Route>
             </Routes>
           </Box>
