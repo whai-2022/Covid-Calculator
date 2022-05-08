@@ -11,6 +11,21 @@ import {
 import locations from '../data/locations.json'
 
 function CitiesSuburbs() {
+  function createCities() {
+    const cities = Object.keys(locations)
+    return (
+      <SimpleGrid minChildWidth="250px" columns={cities.length} spacingX={10}>
+        {cities.map((city) => {
+          return (
+            <Box key={city} padding={5}>
+              {createList(city)}
+            </Box>
+          )
+        })}
+      </SimpleGrid>
+    )
+  }
+
   function createList(city) {
     return (
       <>
@@ -41,11 +56,7 @@ function CitiesSuburbs() {
       <Heading as="h1" size="lg" letterSpacing={'tighter'}>
         Cities and Suburbs
       </Heading>
-      <SimpleGrid minChildWidth="250px" columns={3} spacingX={10}>
-        <Box padding={5}>{createList('Auckland')}</Box>
-        <Box padding={5}>{createList('Wellington')}</Box>
-        <Box padding={5}>{createList('Christchurch')}</Box>
-      </SimpleGrid>
+      {createCities()}
     </>
   )
 }
