@@ -26,19 +26,17 @@ function BusinessList() {
 
   return (
     <>
-      <div>
-        {businesses.map((business) => (
-          <BusinessDetail
-            key={business.id}
-            name={business.name}
-            address={business.address}
-            category={business.category}
-            reliabilityScore={business.reliabilityScore}
-            rating={business.rating}
-            id={business.id}
-          />
-        ))}
-      </div>
+      {businesses.map((business) => (
+        <BusinessDetail
+          key={business.id}
+          name={business.name}
+          address={business.address}
+          category={business.category}
+          reliabilityScore={business.reliabilityScore}
+          rating={business.rating}
+          id={business.id}
+        />
+      ))}
     </>
   )
 }

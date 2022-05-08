@@ -1,8 +1,7 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 
-import { Heading, Box, Center, Flex, Text } from '@chakra-ui/react'
-import { MdStar } from 'react-icons/md'
+import { Badge, Heading, Box, Center, Text } from '@chakra-ui/react'
 
 function BusinessDetail({
   id,
@@ -13,26 +12,22 @@ function BusinessDetail({
   rating,
 }) {
   return (
-    <Center h="100vh">
-      <Box p="5" maxW="320px" borderWidth="1px">
-        {/* <Text mt={2} fontSize="xl" fontWeight="semibold" lineHeight="short">
-          
-        </Text> */}
-        <Heading as="h2" size="3xl">
-          {name}
-        </Heading>
-        <Text mt={2}>{address}</Text>
-        <Text mt={2}>{category}</Text>
-        <Text mt={2}>Reliability Score {reliabilityScore}</Text>
-        <Flex mt={2} align="center">
-          <Box as={MdStar} color="orange.400" />
-          <Text ml={1} fontSize="sm">
-            <b>Rating {rating}</b>
-          </Text>
-          <Text ml={1} fontSize="sm">
-            <Link to={`/businesses/${id}/`}>Details</Link>
-          </Text>
-        </Flex>
+    <Center>
+      <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="100%">
+        <Link to={`/businesses/${id}/`}>
+          <Heading as="h2" size="md">
+            {name}
+          </Heading>
+        </Link>
+        <Text>{address}</Text>
+        <Text fontSize="md">Rating: {rating}</Text>
+        <Text>Reliability Score: {reliabilityScore}</Text>
+        <Text fontSize="md">
+          <Link to={`/businesses/${id}/`}>See details</Link>
+        </Text>
+        <Badge borderRadius="full" px="2" colorScheme="teal">
+          {category}
+        </Badge>
       </Box>
     </Center>
   )
