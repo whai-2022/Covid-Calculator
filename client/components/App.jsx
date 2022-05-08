@@ -8,7 +8,6 @@ import BusinessListingPage from './BusinessListingPage'
 import SuburbResultsPage from './SuburbResultsPage'
 import CitiesSuburbs from './CitiesSuburbs'
 import Footer from './Footer'
-import MapContainer from './MapContainer'
 
 function App() {
   return (
