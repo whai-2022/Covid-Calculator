@@ -1,0 +1,23 @@
+{
+  "Auckland": [
+    "Devonport",
+    "Takapuna",
+    "Parnell",
+    "Ponsonby",
+    "Epsom",
+    "Manukau",
+    "Papatoetoe",
+    "Grey Lynn"
+  ],
+  "Wellington": ["Te Aro", "Miramar", "Newtown", "Brooklyn", "Mount Cook"],
+  "Christchurch": [
+    "Huntsbury",
+    "Fendalton",
+    "Edgeware",
+    "Shirley",
+    "Riccarton",
+    "Burwood",
+    "Northwood",
+    "Sockburn"
+  ]
+}
