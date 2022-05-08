@@ -26,8 +26,8 @@ function SuburbResultsPage() {
       .fetchCoordinates(
         `${formatLocationName(suburb)}, ${formatLocationName(city)}`
       )
-      .then((res) => {
-        setLocation(res.features[0].center)
+      .then(async (res) => {
+        await setLocation(res.features[0].center)
       })
       .catch((err) => {
         console.error(err)
@@ -48,7 +48,7 @@ function SuburbResultsPage() {
       </Heading>
       <Flex justifyContent="space-evenly">
         <Box colSpan={2} justifyItems={'center'}>
-          {location && <MapContainer w="100%" />}
+          {location && <MapContainer w="100%" location={location} />}
         </Box>
         <Box>
           <BusinessList />

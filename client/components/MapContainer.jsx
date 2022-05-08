@@ -10,6 +10,8 @@ mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN
 function MapContainer({ location }) {
   const mapRef = React.useRef()
 
+  console.log(location)
+
   const [viewState, setViewState] = React.useState({
     longitude: location[0],
     latitude: location[1],

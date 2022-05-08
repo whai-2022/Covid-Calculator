@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { MemoryRouter } from 'react-router-dom'
-import { screen, render } from '@testing-library/react'
+import { screen, render, act } from '@testing-library/react'
 
 import SuburbResultsPage from '../SuburbResultsPage'
 import App from '../App'
@@ -9,6 +9,9 @@ import '../MapContainer'
 import '../BusinessList'
 
 import { testBusinesses } from '../../../__mockData__/businesses'
+import api from '../../apis'
+
+jest.mock('../../apis')
 
 const fakeStore = {
   subscribe: jest.fn(),
@@ -17,6 +20,12 @@ const fakeStore = {
   }),
   dispatch: jest.fn(),
 }
+
+beforeAll(() => {
+  api.fetchCoordinates.mockReturnValue(
+    Promise.resolve({ features: [{ center: [0, 0] }] })
+  )
+})
 
 jest.mock('../MapContainer', () => {
   return {
@@ -37,42 +46,51 @@ jest.mock('../BusinessList', () => {
 })
 
 describe('<SuburbResultsPage />', () => {
-  it('renders the h1 title', () => {
-    render(
-      <Provider store={fakeStore}>
-        <SuburbResultsPage />
-      </Provider>
-    )
+  it('renders the h1 title', async () => {
+    await act(async () => {
+      render(
+        <Provider store={fakeStore}>
+          <SuburbResultsPage />
+        </Provider>
+      )
+    })
     expect.assertions(2)
     expect(screen.getByRole('heading')).toHaveTextContent('Listings for')
     expect(screen.getByRole('heading')).not.toHaveTextContent('Weird Words')
   })
-  it('renders a map', () => {
-    render(
-      <Provider store={fakeStore}>
-        <SuburbResultsPage />
-      </Provider>
-    )
+  it('renders a map', async () => {
+    await act(async () => {
+      render(
+        <Provider store={fakeStore}>
+          <SuburbResultsPage />
+        </Provider>
+      )
+    })
     expect.assertions(1)
     expect(screen.getByLabelText('map')).toBeInTheDocument()
   })
-  it('renders a list of businesses', () => {
-    render(
-      <Provider store={fakeStore}>
-        <SuburbResultsPage />
-      </Provider>
-    )
+  it('renders a list of businesses', async () => {
+    await act(async () => {
+      render(
+        <Provider store={fakeStore}>
+          <SuburbResultsPage />
+        </Provider>
+      )
+    })
     expect.assertions(1)
     expect(screen.getByLabelText('businesses')).toBeInTheDocument()
   })
-  it('renders the h1 title using correct params', () => {
-    render(
-      <Provider store={fakeStore}>
-        <MemoryRouter initialEntries={['/cities/auckland/grey-lynn']}>
-          <App />
-        </MemoryRouter>
-      </Provider>
-    )
+  it('renders the h1 title using correct params', async () => {
+    await act(async () => {
+      render(
+        <Provider store={fakeStore}>
+          <MemoryRouter initialEntries={['/cities/auckland/grey-lynn']}>
+            <App />
+          </MemoryRouter>
+        </Provider>
+      )
+    })
+
     expect.assertions(3)
     const headingsHtml = screen.getAllByRole('heading')
     const headings = headingsHtml.map((heading) => {
