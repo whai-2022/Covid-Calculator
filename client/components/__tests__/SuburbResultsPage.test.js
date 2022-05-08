@@ -74,7 +74,6 @@ describe('<SuburbResultsPage />', () => {
       </Provider>
     )
     expect.assertions(3)
-    // expect(screen.getAllByText('Auckland')).toBeInTheDocument()
     const headingsHtml = screen.getAllByRole('heading')
     const headings = headingsHtml.map((heading) => {
       return heading.innerHTML
