@@ -7,6 +7,7 @@ import HomeSplash from './HomeSplash'
 import BusinessListingPage from './BusinessListingPage'
 import CitiesSuburbs from './CitiesSuburbs'
 import SearchPage from './SearchPage'
+import Footer from './Footer'
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
             </Routes>
           </Box>
         </Container>
+        <Footer />
       </Container>
     </>
   )
