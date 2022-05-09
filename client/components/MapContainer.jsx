@@ -7,16 +7,16 @@ import 'mapbox-gl/dist/mapbox-gl.css'
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN
 
-function MapContainer() {
+function MapContainer({ location }) {
   const mapRef = React.useRef()
 
   const [viewState, setViewState] = React.useState({
-    longitude: 174.738057,
-    latitude: -36.860181,
+    longitude: location[0],
+    latitude: location[1],
     zoom: 14,
   })
 
-  const GEOFENCE = turf.circle([174.738057, -36.860181], 2, {
+  const GEOFENCE = turf.circle(location, 2, {
     units: 'kilometres',
   })
 
@@ -31,7 +31,7 @@ function MapContainer() {
   }
 
   const onMapLoad = React.useCallback(() => {
-    console.log(checkIfPositionInViewport(-36.860181, 174.738057))
+    checkIfPositionInViewport(-36.860181, 174.738057)
   }, [])
 
   const onMapMove = React.useCallback(({ viewState }) => {

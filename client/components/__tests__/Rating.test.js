@@ -1,27 +1,32 @@
 import React from 'react'
 import { Provider } from 'react-redux'
 import { screen, render } from '@testing-library/react'
+import { MemoryRouter as Router } from 'react-router-dom'
 
-import BusinessListingPage from '../BusinessListingPage'
+import Rating from '../Rating'
+
+import { testBusinesses } from '../../../__mockData__/businesses'
 import { testBusiness } from '../../../__mockData__/business'
 
 const fakeStore = {
   subscribe: jest.fn(),
   getState: jest.fn(() => {
-    return { business: testBusiness }
+    return { businesses: testBusinesses }
   }),
   dispatch: jest.fn(),
 }
 
-describe('<BusinessListingPage/>', () => {
+describe('<Rating />', () => {
   it('renders the h1 title', () => {
     render(
       <Provider store={fakeStore}>
-        <BusinessListingPage />
+        <Router>
+          <Rating safetyData={testBusiness} />
+        </Router>
       </Provider>
     )
     expect.assertions(2)
-    expect(screen.getAllByRole('heading')[0]).toHaveTextContent('Business page')
+    expect(screen.getAllByRole('heading')[0]).toHaveTextContent(/Rating/i)
     expect(screen.getAllByRole('heading')[0]).not.toHaveTextContent(
       'Weird No Words'
     )

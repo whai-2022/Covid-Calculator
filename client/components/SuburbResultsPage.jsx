@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Heading, Flex, Box } from '@chakra-ui/react'
 
 import BusinessList from './BusinessList'
 import MapContainer from './MapContainer'
 
+import api from '../apis'
+
 function SuburbResultsPage() {
   const { city, suburb } = useParams()
+  const [location, setLocation] = useState(null)
+
   const formatLocationName = (locationName) => {
     return locationName
       ?.replace(/-/g, ' ')
@@ -16,6 +20,19 @@ function SuburbResultsPage() {
       )
       .join(' ')
   }
+
+  useEffect(() => {
+    api
+      .fetchCoordinates(
+        `${formatLocationName(suburb)}, ${formatLocationName(city)}`
+      )
+      .then(async (res) => {
+        await setLocation(res.features[0].center)
+      })
+      .catch((err) => {
+        console.error(err)
+      })
+  }, [])
 
   return (
     <>
@@ -31,7 +48,7 @@ function SuburbResultsPage() {
       </Heading>
       <Flex justifyContent="space-evenly">
         <Box colSpan={2} justifyItems={'center'}>
-          <MapContainer w="100%" />
+          {location && <MapContainer w="100%" location={location} />}
         </Box>
         <Box>
           <BusinessList />

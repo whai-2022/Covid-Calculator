@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
-
 import { Badge, Heading, Box, Center, Text } from '@chakra-ui/react'
+import RatingScore from './RatingScore'
 
 function BusinessDetail({
   id,
@@ -20,7 +20,9 @@ function BusinessDetail({
           </Heading>
         </Link>
         <Text>{address}</Text>
-        <Text fontSize="md">Rating: {rating}</Text>
+        <Text fontSize="md">
+          Rating: <RatingScore score={rating} />
+        </Text>
         <Text>Reliability Score: {reliabilityScore}</Text>
         <Text fontSize="md">
           <Link to={`/businesses/${id}/`}>See details</Link>
