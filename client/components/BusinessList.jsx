@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import { getBusinesses } from '../actions'
 import BusinessDetail from './BusinessDetail.jsx'
 
-function BusinessList() {
+function BusinessList(props) {
   const dispatch = useDispatch()
   const { city, suburb } = useParams()
   const formatLocationName = (locationName) =>
@@ -18,10 +18,18 @@ function BusinessList() {
   }, [])
 
   const businesses = allBusinesses.filter((el) => {
-    return (
-      formatLocationName(el.city) == formatLocationName(city) &&
-      formatLocationName(el.suburb) == formatLocationName(suburb)
-    )
+    if (props.businessCategory) {
+      return (
+        formatLocationName(el.city) == formatLocationName(city) &&
+        formatLocationName(el.suburb) == formatLocationName(suburb) &&
+        el.category == props.businessCategory
+      )
+    } else {
+      return (
+        formatLocationName(el.city) == formatLocationName(city) &&
+        formatLocationName(el.suburb) == formatLocationName(suburb)
+      )
+    }
   })
 
   return (

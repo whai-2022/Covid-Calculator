@@ -4,6 +4,7 @@ import { Heading, Flex, Box } from '@chakra-ui/react'
 
 import BusinessList from './BusinessList'
 import MapContainer from './MapContainer'
+import CategorySelector from './CategorySelector'
 
 import api from '../apis'
 
@@ -34,6 +35,12 @@ function SuburbResultsPage() {
       })
   }, [])
 
+  const [businessCategory, setBusinessCategory] = useState('')
+
+  function handleCategoryChange(evt) {
+    setBusinessCategory(evt.target.value)
+  }
+
   return (
     <>
       <Heading
@@ -51,7 +58,8 @@ function SuburbResultsPage() {
           {location && <MapContainer w="100%" location={location} />}
         </Box>
         <Box>
-          <BusinessList />
+          <CategorySelector handleCategoryChange={handleCategoryChange} />
+          <BusinessList businessCategory={businessCategory} />
         </Box>
       </Flex>
     </>
