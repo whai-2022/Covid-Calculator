@@ -51,6 +51,13 @@ function SuburbResultsPage() {
           {location && <MapContainer w="100%" location={location} />}
         </Box>
         <Box>
+          <select name="harry" id="harry">
+            select a dog
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
           <BusinessList />
         </Box>
       </Flex>

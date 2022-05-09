@@ -2,6 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { MemoryRouter } from 'react-router-dom'
 import { screen, render, act } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import SuburbResultsPage from '../SuburbResultsPage'
 import App from '../App'
@@ -99,5 +100,17 @@ describe('<SuburbResultsPage />', () => {
     expect(headings[1]).toContain('Grey Lynn')
     expect(headings[1]).toContain('Auckland')
     expect(headings[1]).not.toContain('Ponsonby')
+  })
+  it.only('displays the businesses with the category chosen in CategorySelector', async () => {
+    render(
+      <Provider store={fakeStore}>
+        <MemoryRouter initialEntries={['/cities/auckland/grey-lynn']}>
+          <App />
+        </MemoryRouter>
+      </Provider>
+    )
+    userEvent.selectOptions(screen.getByRole('select', { value: 'cafe' }))
+    expect(screen.getByRole('select', { value: 'cafe' }).selected).toBe(true)
+    screen.debug()
   })
 })
