@@ -34,19 +34,19 @@ function HomeSplash() {
               algorithms to determine the risk rating before stepping into that
               shop, cafe or even healthcare provider.
             </Text>
-            <Link color="whiteAlpha.800">
+            <Link to="/businesses/:id" color="whiteAlpha.800">
               Explore the app to learn more
               <Icon as={FiArrowUpRight} ml="10px" h={5} w={5} />
             </Link>
           </Box>
         </Flex>
         <AspectRatio w="full" ratio={16 / 9} mb="-200px">
-          <Img src="/server/public/COVID1.svg" pb="60px" />
+          <Img src="../../server/public/images" pb="60px" />
         </AspectRatio>
       </Box>
       <Box w="full" px="40px" py="20px" bg="white">
         <Flex alignItems="center" pb="20px">
-          <Avatar src="" mr="20px"></Avatar>
+          <Avatar src="../../server/public/images/" mr="20px"></Avatar>
           <Box>
             <Heading fontSize={16} color="blue.900" mb="2px">
               Jeff Walker
