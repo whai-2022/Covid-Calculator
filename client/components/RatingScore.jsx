@@ -1,12 +1,17 @@
 import React from 'react'
-import { Heading } from '@chakra-ui/react'
+import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
 
 function Rating({ score }) {
   return (
     <>
-      <Heading as="h2" size="lg" letterSpacing={'tighter'}>
-        {`${score}%`}
-      </Heading>
+      <CircularProgress
+        value={score}
+        thickness={15}
+        color="green.400"
+        capIsRound
+      >
+        <CircularProgressLabel>{`${score}%`}</CircularProgressLabel>
+      </CircularProgress>
     </>
   )
 }
