@@ -1,7 +1,7 @@
 import React from 'react'
 import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
 
-function Rating({ score }) {
+function RatingScore({ score }) {
   return (
     <>
       <CircularProgress
@@ -16,4 +16,4 @@ function Rating({ score }) {
   )
 }
 
-export default Rating
+export default RatingScore
