@@ -40,7 +40,8 @@ function BusinessList(props) {
           name={business.name}
           address={business.address}
           category={business.category}
-          reliabilityScore={business.reliabilityScore}
+          reliabilityPositive={business.reliabilityPositive}
+          reliabilityNegative={business.reliabilityNegative}
           rating={business.rating}
           id={business.id}
         />

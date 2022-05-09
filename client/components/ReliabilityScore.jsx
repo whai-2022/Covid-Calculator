@@ -1,8 +1,23 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
 
-function ReliabilityScore() {
-  const allBusinesses = useSelector((state) => state.businesses)
+function ReliabilityScore({ reliabilityPositive, reliabilityNegative }) {
+  console.log(reliabilityPositive, reliabilityNegative)
+  const reliabilityScore = parseInt(
+    (reliabilityPositive / (reliabilityPositive + reliabilityNegative)) * 100
+  )
+  return (
+    <>
+      <CircularProgress
+        value={reliabilityScore}
+        thickness={15}
+        color="pink.200"
+        capIsRound
+      >
+        <CircularProgressLabel>{`${reliabilityScore}%`}</CircularProgressLabel>
+      </CircularProgress>
+    </>
+  )
 }
 
 export default ReliabilityScore
