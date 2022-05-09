@@ -30,7 +30,7 @@ function HomeSplash() {
           <Box maxW="300px">
             <Text color="whiteAlpha.700" pb="20px">
               As we return to normal life, you can now choose a business based
-              on it's covid safety rating. We have used a clever set of
+              on it&apos;s covid safety rating. We have used a clever set of
               algorithms to determine the risk rating before stepping into that
               shop, cafe or even healthcare provider.
             </Text>
@@ -60,10 +60,10 @@ function HomeSplash() {
           </Box>
         </Flex>
         <Text color="blue.700" fontSize={14}>
-          "I have friends and family who are immunocompromised. This was app was
-          just what I needed to find a list of possible safe meeting places. I
-          was able to send the list to my family and choose a brunch spot for us
-          to enjoy mothers day."
+          &quot;I have friends and family who are immunocompromised. This was
+          app was just what I needed to find a list of possible safe meeting
+          places. I was able to send the list to my family and choose a brunch
+          spot for us to enjoy mothers day.&quot;
         </Text>
       </Box>
     </>
