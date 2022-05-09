@@ -5,9 +5,7 @@ import HomeSplash from '../HomeSplash'
 
 describe('<HomeSplash/>', () => {
   it('renders a Heading', () => {
-    render(
-    <HomeSplash />
-    )
+    render(<HomeSplash />)
     const headingsHtml = screen.getAllByRole('heading')
     const headings = headingsHtml.map((heading) => {
       return heading.innerHTML

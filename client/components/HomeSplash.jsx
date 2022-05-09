@@ -41,7 +41,10 @@ function HomeSplash() {
           </Box>
         </Flex>
         <AspectRatio w="full" ratio={16 / 9} mb="-200px">
-          <Img src="../../server/public/images" pb="60px" />
+          <Img
+            src="../../server/public/images/vector_masked_cafe.svg"
+            pb="60px"
+          />
         </AspectRatio>
       </Box>
       <Box w="full" px="40px" py="20px" bg="white">
