@@ -11,6 +11,7 @@ import {
 } from '@chakra-ui/react'
 import Rating from './Rating'
 import ReliabilityScore from './ReliabilityScore'
+import UserVoting from './UserVoting'
 import { fetchBusiness } from '../actions'
 
 function BusinessListingPage() {
@@ -64,6 +65,13 @@ function BusinessListingPage() {
             <ReliabilityScore
               reliabilityPositive={business.reliability_positive}
               reliabilityNegative={business.reliability_negative}
+            />
+          )}
+          {!isLoading && (
+            <UserVoting
+              reliabilityPositive={business.reliability_positive}
+              reliabilityNegative={business.reliability_negative}
+              id={business.id}
             />
           )}
         </>
