@@ -2,6 +2,7 @@ import React from 'react'
 import { Provider } from 'react-redux'
 import { MemoryRouter } from 'react-router-dom'
 import { screen, render, act } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 
 import SuburbResultsPage from '../SuburbResultsPage'
 import App from '../App'
@@ -26,6 +27,13 @@ beforeAll(() => {
     Promise.resolve({ features: [{ center: [0, 0] }] })
   )
 })
+
+// MapContainer.mockReturnValue(
+//   <div aria-label="map">Hello World from the Map Container</div>
+// )
+// BusinessList.mockReturnValue(
+//   <div aria-label="businesses">Hello World from the Map Container</div>
+// )
 
 jest.mock('../MapContainer', () => {
   return {
@@ -99,5 +107,23 @@ describe('<SuburbResultsPage />', () => {
     expect(headings[1]).toContain('Grey Lynn')
     expect(headings[1]).toContain('Auckland')
     expect(headings[1]).not.toContain('Ponsonby')
+  })
+  it('displays the businesses with the category chosen in CategorySelector', async () => {
+    await act(async () => {
+      render(
+        <Provider store={fakeStore}>
+          <MemoryRouter initialEntries={['/cities/auckland/grey-lynn']}>
+            <App />
+          </MemoryRouter>
+        </Provider>
+      )
+    })
+
+    userEvent.selectOptions(screen.getByRole('combobox'), 'Cafe')
+
+    expect(screen.getByRole('option', { name: 'Cafe' }).selected).toBe(true)
+    expect(screen.getByRole('option', { name: 'Optometrist' }).selected).toBe(
+      false
+    )
   })
 })

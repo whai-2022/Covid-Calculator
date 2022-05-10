@@ -10,7 +10,8 @@ function getBusinesses(db = connection) {
       'name',
       'address',
       'category',
-      'reliabilityScore',
+      'reliability_positive as reliabilityPositive',
+      'reliability_negative as reliabilityNegative',
       'rating',
       'suburb',
       'city'

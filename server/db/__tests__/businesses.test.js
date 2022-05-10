@@ -20,8 +20,8 @@ describe('getBusinesses', () => {
   it('should return an array of business objects', () => {
     return db.getBusinesses(testDb).then((businesses) => {
       expect(businesses[0]).toHaveProperty('address')
-      expect(businesses[1]).toHaveProperty('reliabilityScore')
-      expect(businesses[0].name).toContain('Sharons Hairdressing')
+      expect(businesses[1]).toHaveProperty('reliabilityPositive')
+      expect(businesses[0].name).toContain("Sharon's Hairdressing")
     })
   })
 })
