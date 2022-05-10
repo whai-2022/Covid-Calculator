@@ -10,7 +10,6 @@ import CitiesSuburbs from './CitiesSuburbs'
 import Footer from './Footer'
 
 function App() {
-  console.log('app')
   return (
     <>
       <Container

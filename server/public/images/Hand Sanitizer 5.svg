@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+[
+<!ATTLIST g
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:layerName CDATA #IMPLIED >
+<!ATTLIST g
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:mask CDATA #IMPLIED >
+<!ATTLIST text
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:width CDATA #IMPLIED >
+<!ATTLIST text
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:text CDATA #IMPLIED >
+
+<!ATTLIST path
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:blendMode CDATA #IMPLIED >
+<!ATTLIST path
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowColor CDATA #IMPLIED >
+<!ATTLIST path
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowOpacity CDATA #IMPLIED >
+<!ATTLIST path
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowRadius CDATA #IMPLIED >
+<!ATTLIST path
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowOffset CDATA #IMPLIED >
+<!ATTLIST path
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowAngle CDATA #IMPLIED >
+
+<!ATTLIST image
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:blendMode CDATA #IMPLIED >
+<!ATTLIST image
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowColor CDATA #IMPLIED >
+<!ATTLIST image
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowOpacity CDATA #IMPLIED >
+<!ATTLIST image
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowRadius CDATA #IMPLIED >
+<!ATTLIST image
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowOffset CDATA #IMPLIED >
+<!ATTLIST image
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowAngle CDATA #IMPLIED >
+
+<!ATTLIST g
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:blendMode CDATA #IMPLIED >
+<!ATTLIST g
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowColor CDATA #IMPLIED >
+<!ATTLIST g
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowOpacity CDATA #IMPLIED >
+<!ATTLIST g
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowRadius CDATA #IMPLIED >
+<!ATTLIST g
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowOffset CDATA #IMPLIED >
+<!ATTLIST g
+  xmlns:vectornator CDATA #FIXED "http://vectornator.io"
+  vectornator:shadowAngle CDATA #IMPLIED >
+
+<!ENTITY % SVG.filter.extra.content  "| feDropShadow" >
+<!ELEMENT feDropShadow EMPTY>
+<!ATTLIST feDropShadow
+  xmlns:svg CDATA #FIXED "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+  dx CDATA #IMPLIED>
+<!ATTLIST feDropShadow
+  xmlns:svg CDATA #FIXED "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+  dy CDATA #IMPLIED>
+<!ATTLIST feDropShadow
+  xmlns:svg CDATA #FIXED "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+  stdDeviation CDATA #IMPLIED>
+<!ATTLIST feDropShadow
+  xmlns:svg CDATA #FIXED "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+  flood-opacity CDATA #IMPLIED>
+<!ATTLIST feDropShadow
+  xmlns:svg CDATA #FIXED "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+  in CDATA #IMPLIED>
+<!ATTLIST feDropShadow
+  xmlns:svg CDATA #FIXED "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+  result CDATA #IMPLIED>
+<!ATTLIST feDropShadow
+  xmlns:svg CDATA #FIXED "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"
+  flood-color CDATA #IMPLIED>
+]
+>
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 64 64" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient" x1="32" x2="32" y1="13" y2="8">
+<stop offset="0" stop-color="#d4d8e1"/>
+<stop offset="1" stop-color="#f3f4f5"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_2" x1="32" x2="32" y1="63" y2="23">
+<stop offset="0" stop-color="#9dd5df"/>
+<stop offset="1" stop-color="#c3e1f5"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(-1 -8.74228e-08 8.74228e-08 -1 64 88)" gradientUnits="userSpaceOnUse" id="LinearGradient_3" x1="32" x2="32" y1="56" y2="32">
+<stop offset="0" stop-color="#9dd5df"/>
+<stop offset="1" stop-color="#c3e1f5"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_4" x1="32" x2="32" y1="23" y2="17">
+<stop offset="0" stop-color="#d4d8e1"/>
+<stop offset="1" stop-color="#f3f4f5"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_5" x1="32" x2="32" y1="17" y2="13">
+<stop offset="0" stop-color="#d4d8e1"/>
+<stop offset="1" stop-color="#f3f4f5"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_6" x1="27" x2="45" y1="4.5" y2="4.5">
+<stop offset="0" stop-color="#d4d8e1"/>
+<stop offset="1" stop-color="#f3f4f5"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_7" x1="32" x2="32" y1="56" y2="34">
+<stop offset="0" stop-color="#d4d8e1"/>
+<stop offset="1" stop-color="#f3f4f5"/>
+</linearGradient>
+<linearGradient gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="LinearGradient_8" x1="25" x2="39" y1="45" y2="45">
+<stop offset="0" stop-color="#319695"/>
+<stop offset="1" stop-color="#39c0c9"/>
+</linearGradient>
+</defs>
+<g id="Hand-Sanitizer" vectornator:layerName="Hand Sanitizer">
+<path d="M30 8L34 8L34 8L34 13L34 13L30 13L30 13L30 8L30 8Z" fill="url(#LinearGradient)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M38 23L26 23L18.21 26.89C16.8546 27.5683 15.9989 28.9543 16 30.47L16 59C16 61.2091 17.7909 63 20 63L43 63C45.7614 63 48 60.7614 48 58L48 31.09C47.9999 29.1978 46.9317 27.4677 45.24 26.62L38 23Z" fill="url(#LinearGradient_2)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M48 56L16 56L16 56L16 32L16 32L48 32L48 32L48 56L48 56Z" fill="url(#LinearGradient_3)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M48 56L48 58C48 60.7614 45.7614 63 43 63L20 63C17.7909 63 16 61.2091 16 59L16 57C16 59.2091 17.7909 61 20 61L43 61C45.7614 61 48 58.7614 48 56Z" fill="#77cacb" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M26 17L38 17L38 17L38 23L38 23L26 23L26 23L26 17L26 17Z" fill="url(#LinearGradient_4)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M26 21L38 21L38 21L38 23L38 23L26 23L26 23L26 21L26 21Z" fill="#c7cdd8" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M28 13L36 13L36 13L36 17L36 17L28 17L28 17L28 13L28 13Z" fill="url(#LinearGradient_5)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M28.94 1L27 1L27 8L37 8C37 6.34315 38.3431 5 40 5L45 5L45 2L45 2C39.6728 1.33206 34.3089 0.998071 28.94 1Z" fill="url(#LinearGradient_6)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M16 34L48 34L48 34L48 56L48 56L16 56L16 56L16 34L16 34Z" fill="url(#LinearGradient_7)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M16 54L48 54L48 54L48 56L48 56L16 56L16 56L16 54L16 54Z" fill="#c7cdd8" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M25 45C25 41.134 28.134 38 32 38C35.866 38 39 41.134 39 45C39 48.866 35.866 52 32 52C28.134 52 25 48.866 25 45Z" fill="url(#LinearGradient_8)" fill-rule="evenodd" opacity="1" stroke="none"/>
+<path d="M35 44L33 44L33 42C33 41.4477 32.5523 41 32 41C31.4477 41 31 41.4477 31 42L31 44L29 44C28.4477 44 28 44.4477 28 45C28 45.5523 28.4477 46 29 46L31 46L31 48C31 48.5523 31.4477 49 32 49C32.5523 49 33 48.5523 33 48L33 46L35 46C35.5523 46 36 45.5523 36 45C36 44.4477 35.5523 44 35 44Z" fill="#f9941e" fill-rule="evenodd" opacity="1" stroke="none"/>
+</g>
+</svg>

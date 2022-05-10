@@ -72,6 +72,7 @@ function BusinessList(props) {
             reliabilityNegative={business.reliabilityNegative}
             rating={business.rating}
             id={business.id}
+            showDetails={true}
           />
         ))
         .sort(sortChoice)}

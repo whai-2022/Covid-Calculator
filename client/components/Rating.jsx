@@ -55,12 +55,12 @@ function Rating(props) {
   if (Object.keys(safetyData).length !== 0) score = calculateRisk()
 
   return (
-    <>
+    <div>
       <Heading as="h2" size="lg" letterSpacing={'tighter'}>
         Safety Rating:
       </Heading>
       {score != null && <RatingScore score={score} />}
-    </>
+    </div>
   )
 }
 
