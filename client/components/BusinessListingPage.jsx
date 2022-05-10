@@ -24,7 +24,6 @@ function BusinessListingPage() {
   const [isLoading, setIsLoading] = useState(false)
 
   const business = useSelector((state) => state.business)
-  console.log(business)
 
   useEffect(() => {
     setIsLoading(true)
