@@ -23,7 +23,6 @@ function Breadcrumbs() {
       .join(' ')
   }
 
-  console.log(pathname)
   return (
     <>
       <Breadcrumb spacing="3px" separator={<BiChevronRight color="gray.500" />}>
