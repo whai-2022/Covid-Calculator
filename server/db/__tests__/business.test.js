@@ -21,7 +21,7 @@ describe('getBusinessById', () => {
     return db.getBusinessById(1, testDb).then((business) => {
       expect(business).toHaveProperty('handSanitizer')
       expect(business).toHaveProperty('rating')
-      expect(business.name).toContain('Sharons Hairdressing')
+      expect(business.name).toContain("Sharon's Hairdressing")
     })
   })
 })

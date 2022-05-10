@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react'
 import Rating from './Rating'
 import ShowStat from './ShowStat'
+import ReliabilityScore from './ReliabilityScore'
 import { fetchBusiness } from '../actions'
 
 import safetyOptions from '../data/safetyOptions.json'
@@ -23,6 +24,7 @@ function BusinessListingPage() {
   const [isLoading, setIsLoading] = useState(false)
 
   const business = useSelector((state) => state.business)
+  console.log(business)
 
   useEffect(() => {
     setIsLoading(true)
@@ -122,6 +124,15 @@ function BusinessListingPage() {
             </Box>
           </Box>
           {!isLoading && <Rating safetyData={business} />}
+          <Heading as="h2" mt="6" size="lg" letterSpacing={'tighter'}>
+            Reliability Score:
+          </Heading>
+          {!isLoading && (
+            <ReliabilityScore
+              reliabilityPositive={business.reliability_positive}
+              reliabilityNegative={business.reliability_negative}
+            />
+          )}
         </>
       )}
     </>
