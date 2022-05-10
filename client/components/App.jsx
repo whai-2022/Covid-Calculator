@@ -7,6 +7,7 @@ import HomeSplash from './HomeSplash'
 import BusinessListingPage from './BusinessListingPage'
 import SuburbResultsPage from './SuburbResultsPage'
 import CitiesSuburbs from './CitiesSuburbs'
+import City from './City'
 import Footer from './Footer'
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
                 element={<BusinessListingPage />}
               ></Route>
               <Route exact path="cities" element={<CitiesSuburbs />}></Route>
-              <Route exact path="cities/:city" element={'city'}></Route>
+              <Route exact path="cities/:city" element={<City />}></Route>
               <Route
                 exact
                 path="cities/:city/:suburb"
