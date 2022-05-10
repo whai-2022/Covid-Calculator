@@ -9,7 +9,8 @@ exports.up = function (knex) {
     table.string('name')
     table.string('address')
     table.string('category')
-    table.integer('reliabilityScore')
+    table.integer('reliability_positive')
+    table.integer('reliability_negative')
     table.integer('rating')
   })
 }
