@@ -9,6 +9,7 @@ function ReliabilityScore({ reliabilityPositive, reliabilityNegative }) {
   return (
     <>
       <CircularProgress
+        id="reliabilityScore"
         value={reliabilityScore}
         thickness={15}
         color="pink.200"
