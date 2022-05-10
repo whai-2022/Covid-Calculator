@@ -45,6 +45,7 @@ function BusinessList(props) {
       <Stack direction="row" spacing={2} m={2} align="center">
         <Text>Sort By:</Text>
         <Button
+          id={active == 'default' ? 'selected' : 'unselected'}
           colorScheme="teal"
           onClick={() => setActive('default')}
           variant={active == 'default' ? 'solid' : 'outline'}
@@ -52,6 +53,7 @@ function BusinessList(props) {
           Alphabetical
         </Button>
         <Button
+          id={active != 'default' ? 'selected' : 'unselected'}
           colorScheme="teal"
           onClick={() => setActive('alpha')}
           variant={active != 'default' ? 'solid' : 'outline'}
