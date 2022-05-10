@@ -12,38 +12,32 @@ function BusinessDetail({
   reliabilityPositive,
   reliabilityNegative,
   rating,
+  showDetails,
 }) {
-  console.log(
-    id,
-    name,
-    address,
-    category,
-    reliabilityPositive,
-    reliabilityNegative,
-    rating
-  )
   return (
     <Center>
       <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="100%">
-        <Link to={`/businesses/${id}/`}>
+        <Link to={`/businesses/${id}`}>
           <Heading as="h2" size="md">
             {name}
           </Heading>
         </Link>
         <Text>{address}</Text>
-        <Text fontSize="md">
+        <Box>
           Rating: <RatingScore score={rating} />
-        </Text>
-        <Text>
+        </Box>
+        <Box>
           Reliability Score:{' '}
           <ReliabilityScore
             reliabilityPositive={reliabilityPositive}
             reliabilityNegative={reliabilityNegative}
           />{' '}
-        </Text>
-        <Text fontSize="md">
-          <Link to={`/businesses/${id}/`}>See details</Link>
-        </Text>
+        </Box>
+        {showDetails && (
+          <Text fontSize="md">
+            <Link to={`/businesses/${id}`}>See details</Link>
+          </Text>
+        )}
         <Badge borderRadius="full" px="2" colorScheme="teal">
           {category}
         </Badge>
