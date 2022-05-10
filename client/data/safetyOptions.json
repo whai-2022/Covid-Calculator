@@ -1,0 +1,11 @@
+{
+  "masking": [
+    "None/Cloth",
+    "Thick Cloth",
+    "Surgical Mask",
+    "N95. KN85, FFP2",
+    "N95 Sealed"
+  ],
+  "minSpacing": ["Close (<1 metre)", "1 metre", "2 metres+"],
+  "ventilation": ["Indoor", "Moderate Ventilation", "Outdoor"]
+}
