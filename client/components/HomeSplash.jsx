@@ -49,7 +49,7 @@ function HomeSplash() {
           <Avatar src="https://bit.ly/dan-abramov" mr="20px"></Avatar>
           <Box>
             <Heading fontSize={16} color="blue.900" mb="2px">
-              Jeff Walker
+              Dan Abramov
             </Heading>
             <Text fontSize={12} color="gray.500">
               Lives in the Grey Lynn Community
