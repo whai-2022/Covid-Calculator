@@ -1,5 +1,12 @@
 import React from 'react'
-import { HStack, Tag } from '@chakra-ui/react'
+import {
+  HStack,
+  Tag,
+  TagLabel,
+  TagLeftIcon,
+  TagRightIcon,
+} from '@chakra-ui/react'
+import { RiCheckboxFill, RiSubtractFill } from 'react-icons/ri'
 
 function ShowStat({ stat, titles }) {
   return (
@@ -8,12 +15,24 @@ function ShowStat({ stat, titles }) {
         return (
           <Tag
             p={3}
-            size={'md'}
+            size={i == stat ? 'lg' : 'md'}
             key={title}
-            variant={i == stat ? 'solid' : 'outline'}
-            colorScheme="teal"
+            variant={i == stat ? 'solid' : 'solid'}
+            colorScheme={i == stat ? 'teal' : 'gray'}
+            opacity={i == stat ? '1' : '0.4'}
           >
-            {title}
+            <TagLeftIcon
+              boxSize={i == stat ? '20px' : '0.001px'}
+              as={i == stat ? RiCheckboxFill : RiSubtractFill}
+              opacity={i == stat ? '1' : '0'}
+            />
+
+            <TagLabel>{title}</TagLabel>
+            <TagRightIcon
+              boxSize={'0.001px'}
+              as={RiSubtractFill}
+              opacity="0"
+            ></TagRightIcon>
           </Tag>
         )
       })}
