@@ -27,8 +27,8 @@ function SuburbResultsPage() {
       .fetchCoordinates(
         `${formatLocationName(suburb)}, ${formatLocationName(city)}`
       )
-      .then(async (res) => {
-        await setLocation(res.features[0].center)
+      .then((res) => {
+        return setLocation(res.features[0].center)
       })
       .catch((err) => {
         console.error(err)

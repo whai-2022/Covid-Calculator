@@ -4,9 +4,11 @@ import { Container, Box } from '@chakra-ui/react'
 
 import Navbar from './Navbar'
 import HomeSplash from './HomeSplash'
+import Breadcrumbs from './Breadcrumbs'
 import BusinessListingPage from './BusinessListingPage'
 import SuburbResultsPage from './SuburbResultsPage'
 import CitiesSuburbs from './CitiesSuburbs'
+import City from './City'
 import Footer from './Footer'
 
 function App() {
@@ -31,6 +33,7 @@ function App() {
             bg="white"
             p={5}
           >
+            <Breadcrumbs key={window.location.pathname} />
             <Routes>
               <Route exact path="/" element={<HomeSplash />}></Route>
               <Route
@@ -39,7 +42,7 @@ function App() {
                 element={<BusinessListingPage />}
               ></Route>
               <Route exact path="cities" element={<CitiesSuburbs />}></Route>
-              <Route exact path="cities/:city" element={'city'}></Route>
+              <Route exact path="cities/:city" element={<City />}></Route>
               <Route
                 exact
                 path="cities/:city/:suburb"

@@ -1,17 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import {
-  Box,
-  Heading,
-  Flex,
-  Text,
-  UnorderedList,
-  ListItem,
-} from '@chakra-ui/react'
-import Rating from './Rating'
-import ReliabilityScore from './ReliabilityScore'
+import { Box, Heading, Flex } from '@chakra-ui/react'
+
 import { fetchBusiness } from '../actions'
+
+import BusinessDetail from './BusinessDetail.jsx'
+
+import SafetyInfo from './SafetyInfo'
 
 function BusinessListingPage() {
   const dispatch = useDispatch()
@@ -36,35 +32,21 @@ function BusinessListingPage() {
       {!isLoading && (
         <>
           <Box display={{ base: 'block' }} m={5}>
-            <Text>Business info:</Text>
-            <UnorderedList>
-              <ListItem>{business.name}</ListItem>
-              <ListItem>{business.category}</ListItem>
-              <ListItem>{business.address}</ListItem>
-            </UnorderedList>
+            <BusinessDetail
+              key={business.id}
+              name={business.name}
+              address={business.address}
+              category={business.category}
+              reliabilityPositive={business.reliabilityPositive}
+              reliabilityNegative={business.reliabilityNegative}
+              rating={business.rating}
+              id={business.id}
+              showDetails={false}
+            />
           </Box>
           <Box display={{ base: 'block' }} m={5}>
-            <Text>Safety info:</Text>
-            <UnorderedList>
-              <ListItem>cleaningProtocol: {business.cleaningProtocol}</ListItem>
-              <ListItem>handSanitizer: {business.handSanitizer}</ListItem>
-              <ListItem>masking: {business.masking}</ListItem>
-              <ListItem>minSpacing: {business.minSpacing}</ListItem>
-              <ListItem>vaccinePass: {business.vaccinePass}</ListItem>
-              <ListItem>vaccineStaff: {business.vaccineStaff}</ListItem>
-              <ListItem>ventilation: {business.ventilation}</ListItem>
-            </UnorderedList>
+            <SafetyInfo business={business} />
           </Box>
-          {!isLoading && <Rating safetyData={business} />}
-          <Heading as="h2" mt="6" size="lg" letterSpacing={'tighter'}>
-            Reliability Score:
-          </Heading>
-          {!isLoading && (
-            <ReliabilityScore
-              reliabilityPositive={business.reliability_positive}
-              reliabilityNegative={business.reliability_negative}
-            />
-          )}
         </>
       )}
     </>
