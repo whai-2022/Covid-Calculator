@@ -10,8 +10,14 @@ import { BiChevronRight } from 'react-icons/bi'
 
 function Breadcrumbs() {
   const location = useLocation()
-  const { pathname } = location
-  const splitLocation = pathname.split('/')
+  let { pathname } = location
+  if (pathname[pathname.length - 1] == '/') pathname = pathname.slice(0, -1)
+  let splitLocation = pathname.split('/')
+  if (!isNaN(splitLocation[splitLocation.length - 1])) {
+    splitLocation[splitLocation.length - 2] +=
+      '/' + splitLocation[splitLocation.length - 1]
+    splitLocation.splice(-1)
+  }
 
   const formatLocationName = (locationName) => {
     return locationName
@@ -26,7 +32,7 @@ function Breadcrumbs() {
   return (
     <>
       <Breadcrumb spacing="3px" separator={<BiChevronRight color="gray.500" />}>
-        {pathname == '/'
+        {pathname == ''
           ? ''
           : splitLocation.map((location, i) => {
               return (
