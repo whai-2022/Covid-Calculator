@@ -17,7 +17,7 @@ function BusinessDetail({
   return (
     <Center>
       <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="100%">
-        <Link to={`/businesses/${id}/`}>
+        <Link to={`/businesses/${id}`}>
           <Heading as="h2" size="md">
             {name}
           </Heading>
@@ -35,7 +35,7 @@ function BusinessDetail({
         </Box>
         {showDetails && (
           <Text fontSize="md">
-            <Link to={`/businesses/${id}/`}>See details</Link>
+            <Link to={`/businesses/${id}`}>See details</Link>
           </Text>
         )}
         <Badge borderRadius="full" px="2" colorScheme="teal">
