@@ -1,11 +1,11 @@
 {
   "masking": [
-    "None/Cloth",
-    "Thick Cloth",
-    "Surgical Mask",
-    "N95. KN85, FFP2",
-    "N95 Sealed"
+    {"name": "None/Cloth", "description": ""},
+    {"name": "Thick Cloth", "description": ""},
+    {"name": "Surgical Mask", "description": ""},
+    {"name": "N95. KN85, FFP2", "description": ""},
+    {"name": "N95 Sealed", "description": ""}
   ],
-  "minSpacing": ["Close (<1 metre)", "1 metre", "2 metres+"],
-  "ventilation": ["Indoor", "Moderate Ventilation", "Outdoor"]
+  "minSpacing": [{"name": "Close (<0.3 metres apart)", "description": ""}, {"name": "1 metre", "description": ""}, {"name": "2 metres+", "description": ""}],
+  "ventilation": [{"name": "Indoor", "description": ""}, {"name": "Moderate Ventilation", "description": ""}, {"name": "Outdoor", "description": ""}]
 }

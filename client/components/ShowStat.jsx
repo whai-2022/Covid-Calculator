@@ -16,7 +16,7 @@ function ShowStat({ stat, titles }) {
           <Tag
             p={3}
             size={i == stat ? 'lg' : 'md'}
-            key={title}
+            key={title.name}
             variant={i == stat ? 'solid' : 'solid'}
             colorScheme={i == stat ? 'teal' : 'gray'}
             opacity={i == stat ? '1' : '0.4'}
@@ -27,7 +27,7 @@ function ShowStat({ stat, titles }) {
               opacity={i == stat ? '1' : '0'}
             />
 
-            <TagLabel>{title}</TagLabel>
+            <TagLabel>{title.name}</TagLabel>
             <TagRightIcon
               boxSize={'0.001px'}
               as={RiSubtractFill}
