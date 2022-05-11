@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Heading, Flex, Box } from '@chakra-ui/react'
 
 import BusinessList from './BusinessList'
 import MapContainer from './MapContainer'
 import CategorySelector from './CategorySelector'
+import { setError } from '../actions'
 
 import api from '../apis'
 
 function SuburbResultsPage() {
+  const dispatch = useDispatch()
   const { city, suburb } = useParams()
   const [location, setLocation] = useState(null)
 
@@ -31,7 +34,8 @@ function SuburbResultsPage() {
         return setLocation(res.features[0].center)
       })
       .catch((err) => {
-        console.error(err)
+        dispatch(setError(err))
+        console.error('Unable to find suburb location')
       })
   }, [])
 
