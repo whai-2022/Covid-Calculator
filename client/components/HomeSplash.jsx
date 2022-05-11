@@ -16,26 +16,26 @@ import { Link as RouterLink } from 'react-router-dom'
 function HomeSplash() {
   return (
     <>
-      <Box w="full" bg="blue.900" px="200px" py="60px" mb="120px">
+      <Box w="full" bg="blue.90" px="200px" py="60px" mb="120px">
         <Flex justifyContent="space-between" alignItems="center" pb="60px">
           <Heading
             as="h1"
             size="lg"
             letterSpacing={'tighter'}
-            color="whiteAlpha.700"
+            color="blue.900"
             pb="50px"
           >
             Wherever you are, find a safe space to enjoy...
           </Heading>
 
           <Box maxW="300px">
-            <Text color="whiteAlpha.700" pb="20px">
+            <Text color="blue.900" pb="20px">
               As we return to normal life, you can now choose a business based
-              on it&apos;s covid safety rating. We have used a clever set of
+              on its covid safety rating. We have used a clever set of
               algorithms to determine the risk rating before stepping into that
               shop, cafe or even healthcare provider.
             </Text>
-            <Link as={RouterLink} to="cities" color="whiteAlpha.800">
+            <Link as={RouterLink} to="cities" color="blue.900">
               Explore the app to learn more
               <Icon as={FiArrowUpRight} ml="10px" h={5} w={5} />
             </Link>
@@ -58,10 +58,9 @@ function HomeSplash() {
           </Box>
         </Flex>
         <Text color="blue.700" fontSize={14}>
-          &quot;I have friends and family who are immunocompromised. This was
-          app was just what I needed to find a list of possible safe meeting
-          places. I was able to send the list to my family and choose a brunch
-          spot for us to enjoy mothers day.&quot;
+          &quot;I have friends and family who are immunocompromised. This app
+          was just what I needed. I was able to send the list to my family and
+          choose a brunch spot for us to enjoy mothers day.&quot;
         </Text>
       </Box>
     </>

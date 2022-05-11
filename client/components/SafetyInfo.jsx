@@ -7,12 +7,57 @@ import safetyOptions from '../data/safetyOptions.json'
 function SafetyInfo({ business }) {
   return (
     <>
-      <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="100%">
+      <Box p="5" borderWidth="0px" borderRadius="lg" mb="16px" w="100%">
         {/* <Center> */}
         <Heading marginBottom="10px" as="h2" size="lg" color="black">
           Safety info
         </Heading>
         {/* </Center> */}
+        <Box direction="row" p={2}>
+          <Heading
+            marginBottom="8px"
+            as="h5"
+            size="md"
+            letterSpacing={'tighter'}
+          >
+            Mask Protocols for Staff:
+          </Heading>
+          <Text fontSize="xl">{safetyOptions.masking.description}</Text>
+          <ShowStat
+            stat={business.masking}
+            titles={safetyOptions.masking.options}
+          />
+        </Box>
+        <Box direction="row" p={2}>
+          <Heading
+            marginBottom="8px"
+            as="h5"
+            size="md"
+            letterSpacing={'tighter'}
+          >
+            Minimum Spacing Between Customers/Visitors:
+          </Heading>
+          <Text fontSize="xl">{safetyOptions.minSpacing.description}</Text>
+          <ShowStat
+            stat={business.minSpacing}
+            titles={safetyOptions.minSpacing.options}
+          />
+        </Box>
+        <Box direction="row" p={2}>
+          <Heading
+            marginBottom="8px"
+            as="h5"
+            size="md"
+            letterSpacing={'tighter'}
+          >
+            Ventilation on Site:
+          </Heading>
+          <Text fontSize="xl">{safetyOptions.ventilation.description}</Text>
+          <ShowStat
+            stat={business.ventilation}
+            titles={safetyOptions.ventilation.options}
+          />
+        </Box>
         <SimpleGrid minChildWidth="250px" columns={2} spacingX={10}>
           <Box direction="row" borderWidth="1px" borderRadius="md" m={2} p={2}>
             <Heading
@@ -99,51 +144,6 @@ function SafetyInfo({ business }) {
             )}
           </Box>
         </SimpleGrid>
-        <Box direction="row" p={2}>
-          <Heading
-            marginBottom="8px"
-            as="h5"
-            size="md"
-            letterSpacing={'tighter'}
-          >
-            Mask Protocols for Staff:
-          </Heading>
-          <Text fontSize="xl">{safetyOptions.masking.description}</Text>
-          <ShowStat
-            stat={business.masking}
-            titles={safetyOptions.masking.options}
-          />
-        </Box>
-        <Box direction="row" p={2}>
-          <Heading
-            marginBottom="8px"
-            as="h5"
-            size="md"
-            letterSpacing={'tighter'}
-          >
-            Minimum Spacing Between Customers/Visitors:
-          </Heading>
-          <Text fontSize="xl">{safetyOptions.minSpacing.description}</Text>
-          <ShowStat
-            stat={business.minSpacing}
-            titles={safetyOptions.minSpacing.options}
-          />
-        </Box>
-        <Box direction="row" p={2}>
-          <Heading
-            marginBottom="8px"
-            as="h5"
-            size="md"
-            letterSpacing={'tighter'}
-          >
-            Ventilation on Site:
-          </Heading>
-          <Text fontSize="xl">{safetyOptions.ventilation.description}</Text>
-          <ShowStat
-            stat={business.ventilation}
-            titles={safetyOptions.ventilation.options}
-          />
-        </Box>
       </Box>
     </>
   )

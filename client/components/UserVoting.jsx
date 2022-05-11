@@ -1,6 +1,14 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { HStack, Box, Icon, StatNumber, Stat } from '@chakra-ui/react'
+import {
+  HStack,
+  StatNumber,
+  Stat,
+  Tag,
+  TagLabel,
+  TagLeftIcon,
+  TagRightIcon,
+} from '@chakra-ui/react'
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa'
 import { postThumbDown, postThumbUp } from '../apis/voting'
 import { fetchBusiness } from '../actions/business'
@@ -29,29 +37,49 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
   }
 
   return (
-    <HStack bg="blue.200" color="blue.900" borderRadius={15} p={3}>
+    <HStack color="blue.900">
       <span>This was my experience</span>
-      <Icon
-        boxSize={14}
-        as={FaThumbsUp}
-        color="white"
-        value={reliabilityPositive}
+      <Tag
+        p={3}
+        size={'lg'}
+        variant={'solid'}
+        colorScheme={'facebook'}
+        cursor={'pointer'}
         onClick={() => handlePositiveSubmit(id)}
-      ></Icon>
-      <Stat>
-        <StatNumber>{reliabilityPositive}</StatNumber>
-      </Stat>
-      <Box bg="white"></Box>
-      <Stat>
-        <StatNumber>{reliabilityNegative}</StatNumber>
-      </Stat>
-      <Icon
-        boxSize={14}
-        as={FaThumbsDown}
-        color="white"
-        value={reliabilityNegative}
+      >
+        <TagLeftIcon
+          boxSize={14}
+          as={FaThumbsUp}
+          color="white"
+          value={reliabilityPositive}
+        />
+        <TagLabel>
+          {' '}
+          <Stat>
+            <StatNumber>{reliabilityPositive}</StatNumber>
+          </Stat>
+        </TagLabel>
+      </Tag>
+      <Tag
+        p={3}
+        size={'lg'}
+        variant={'solid'}
+        colorScheme={'facebook'}
+        cursor={'pointer'}
         onClick={() => handleNegativeSubmit(id)}
-      ></Icon>
+      >
+        <TagLabel>
+          <Stat>
+            <StatNumber>{reliabilityNegative}</StatNumber>
+          </Stat>
+        </TagLabel>
+        <TagRightIcon
+          boxSize={14}
+          as={FaThumbsDown}
+          color="white"
+          value={reliabilityNegative}
+        />
+      </Tag>
       <span>{`This wasn't my experience`}</span>
     </HStack>
   )

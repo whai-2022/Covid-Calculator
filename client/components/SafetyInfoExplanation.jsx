@@ -65,7 +65,6 @@ function SafetyInfoExplanation() {
                     backgroundColor: 'blue.200',
                     color: 'black',
                   }}
-                  backgroundColor="blue.50"
                 >
                   <Box flex="1" textAlign="left">
                     Minimum Spacing Between Customers/Visitors{' '}
@@ -110,7 +109,6 @@ function SafetyInfoExplanation() {
                     backgroundColor: 'blue200',
                     color: 'black',
                   }}
-                  backgroundColor="blue.50"
                 >
                   <Box flex="1" textAlign="left">
                     Vaccination Pass Requirements for Customers/Visitors:
@@ -154,7 +152,6 @@ function SafetyInfoExplanation() {
                     backgroundColor: 'blue.200',
                     color: 'black',
                   }}
-                  backgroundColor="blue.50"
                 >
                   <Box flex="1" textAlign="left">
                     Cleaning Protocols

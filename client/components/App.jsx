@@ -18,7 +18,7 @@ function App() {
         w="100%"
         maxW="100%"
         minH="100vh"
-        bg="blue.100"
+        bg="blue.90"
         p={0}
         display="flex"
         flexDirection="column"

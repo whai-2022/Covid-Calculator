@@ -11,8 +11,10 @@ afterAll(() => {
 })
 
 describe('GET /', () => {
-  test('gets the pets from the given userId', () => {
-    db.getBusinessById.mockReturnValue(Promise.resolve(testBusiness))
+  test('gets the business with the given id', () => {
+    db.getBusinessAndSafetyInfoById.mockReturnValue(
+      Promise.resolve(testBusiness)
+    )
 
     return request(server)
       .get(`/api/v1/business/1`)
@@ -23,7 +25,7 @@ describe('GET /', () => {
 
   it('tests error in routes', () => {
     expect.assertions(1)
-    db.getBusinessById.mockImplementation(() =>
+    db.getBusinessAndSafetyInfoById.mockImplementation(() =>
       Promise.reject(new Error('not working'))
     )
     return request(server)

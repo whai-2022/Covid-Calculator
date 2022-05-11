@@ -40,7 +40,7 @@ function BusinessDetail({
             </Link>
           </Text>
         )}
-        <Badge borderRadius="full" px="2" colorScheme="teal">
+        <Badge borderRadius="full" px="2" colorScheme="blue">
           {category}
         </Badge>
       </Box>

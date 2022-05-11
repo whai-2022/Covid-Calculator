@@ -22,12 +22,12 @@ function Navbar() {
       justify="space-between"
       wrap="wrap"
       padding={6}
-      bg="blue.50"
-      color="teal.500"
+      bg="blue.900"
+      color="gray.200"
     >
       <Flex align="center" mr={5}>
         <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-          Covid Calculator
+          <Link to="/">Covid Calculator</Link>
         </Heading>
       </Flex>
       <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>
