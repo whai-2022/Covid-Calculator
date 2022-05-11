@@ -1,4 +1,8 @@
 {
+  "cleaning": { "description": "" },
+  "handSanitizer": { "description": "" },
+  "vaccinePass": { "description": "" },
+  "vaccineRequirement": { "description": "" },
   "masking": {
     "description": "test subheading",
     "options": [
@@ -10,7 +14,7 @@
     ]
   },
   "minSpacing": {
-    "description": "",
+    "description": "test subheading minspace",
     "options": [
       { "name": "Close (<0.3 metres apart)", "description": "" },
       { "name": "1 metre", "description": "" },
@@ -18,7 +22,7 @@
     ]
   },
   "ventilation": {
-    "description": "",
+    "description": "test subheading ventilation",
     "options": [
       { "name": "Indoor", "description": "" },
       { "name": "Moderate Ventilation", "description": "" },
