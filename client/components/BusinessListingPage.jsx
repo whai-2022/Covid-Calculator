@@ -64,15 +64,6 @@ function BusinessListingPage() {
             </Text>
           </Box>
           {!isLoading && <Rating safetyData={business} />}
-          <Heading as="h2" mt="6" size="lg" letterSpacing={'tighter'}>
-            Reliability Score:
-          </Heading>
-          {!isLoading && (
-            <ReliabilityScore
-              reliabilityPositive={business.reliability_positive}
-              reliabilityNegative={business.reliability_negative}
-            />
-          )}
           {!isLoading && (
             <UserVoting
               reliabilityPositive={business.reliability_positive}
