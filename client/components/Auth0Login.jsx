@@ -47,8 +47,8 @@ const Login = () => {
         <Button
           onClick={handleSignIn}
           variant="outline"
-          _hover={{ bg: 'teal.600', borderColor: 'teal.600', color: 'white' }}
-          colorScheme="teal"
+          _hover={{ bg: 'blue.600', borderColor: 'blue.90', color: 'white' }}
+          colorScheme="blue.90"
           m={2}
         >
           Business Sign In
