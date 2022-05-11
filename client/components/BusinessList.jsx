@@ -46,7 +46,7 @@ function BusinessList(props) {
         <Text>Sort By:</Text>
         <Button
           id={active == 'default' ? 'selected' : 'unselected'}
-          colorScheme="teal"
+          colorScheme="facebook"
           onClick={() => setActive('default')}
           variant={active == 'default' ? 'solid' : 'outline'}
         >
@@ -54,7 +54,7 @@ function BusinessList(props) {
         </Button>
         <Button
           id={active != 'default' ? 'selected' : 'unselected'}
-          colorScheme="teal"
+          colorScheme="facebook"
           onClick={() => setActive('alpha')}
           variant={active != 'default' ? 'solid' : 'outline'}
         >

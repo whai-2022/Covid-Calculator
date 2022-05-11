@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Heading, Text, Badge } from '@chakra-ui/react'
+import { Box, Heading, Text, Badge, SimpleGrid } from '@chakra-ui/react'
 import ShowStat from './ShowStat'
 
 import safetyOptions from '../data/safetyOptions.json'
@@ -7,76 +7,145 @@ import safetyOptions from '../data/safetyOptions.json'
 function SafetyInfo({ business }) {
   return (
     <>
-      <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="100%">
-        <Heading as="h2" size="md" letterSpacing={'tighter'}>
-          Safety info:
+      <Box p="5" borderWidth="0px" borderRadius="lg" mb="16px" w="100%">
+        <Heading marginBottom="10px" as="h2" size="lg" color="black">
+          Safety info
         </Heading>
-        <Box direction="row">
-          <Text>Cleaning Protocols: </Text>
-          {business.vaccineStaff ? (
-            <Badge borderRadius="full" px="2" colorScheme="teal">
-              In place
-            </Badge>
-          ) : (
-            <Badge borderRadius="full" px="2" colorScheme="orange">
-              Not in place
-            </Badge>
-          )}
+        <Box direction="row" p={2}>
+          <Text marginBottom="8px" fontSize="md" size="md">
+            Mask Protocols for Staff:
+          </Text>
+          <Text fontSize="xl">{safetyOptions.masking.description}</Text>
+          <ShowStat
+            stat={business.masking}
+            titles={safetyOptions.masking.options}
+          />
         </Box>
-        <Box direction="row">
-          <Text>Hand Sanitiser Availability for Customer/Visitor Use: </Text>
-          {business.handsanitizer ? (
-            <Badge borderRadius="full" px="2" colorScheme="teal">
-              Avaliable
-            </Badge>
-          ) : (
-            <Badge borderRadius="full" px="2" colorScheme="orange">
-              Not Avaliable
-            </Badge>
-          )}
-        </Box>
-        <Box direction="row">
-          <Text>Mask Protocols for Staff: </Text>
-          <ShowStat stat={business.masking} titles={safetyOptions.masking} />
-        </Box>
-        <Box direction="row">
-          <Text>Minimum Spacing Between Customers/Visitors: </Text>
+        <Box direction="row" p={2}>
+          <Text marginBottom="8px" fontSize="md" size="md">
+            Minimum Spacing Between Customers/Visitors:
+          </Text>
+          <Text fontSize="xl">{safetyOptions.minSpacing.description}</Text>
           <ShowStat
             stat={business.minSpacing}
-            titles={safetyOptions.minSpacing}
+            titles={safetyOptions.minSpacing.options}
           />
         </Box>
-        <Box direction="row">
-          <Text>Ventilation on Site: </Text>
+        <Box direction="row" p={2}>
+          <Text marginBottom="8px" fontSize="md" size="md">
+            Ventilation on Site:
+          </Text>
+          <Text fontSize="xl">{safetyOptions.ventilation.description}</Text>
           <ShowStat
             stat={business.ventilation}
-            titles={safetyOptions.ventilation}
+            titles={safetyOptions.ventilation.options}
           />
         </Box>
-        <Box direction="row">
-          <Text>Vaccination Pass Requirements for Customers/Visitors: </Text>
-          {business.vaccinePass ? (
-            <Badge borderRadius="full" px="2" colorScheme="teal">
-              Visitor vaccination pass required
-            </Badge>
-          ) : (
-            <Badge borderRadius="full" px="2" colorScheme="orange">
-              Visitor vaccination pass not required
-            </Badge>
-          )}
-        </Box>
-        <Box direction="row">
-          <Text>Staff Vaccination Requirements: </Text>
-          {business.vaccineStaff ? (
-            <Badge borderRadius="full" px="2" colorScheme="teal">
-              Staff vaccinations required
-            </Badge>
-          ) : (
-            <Badge borderRadius="full" px="2" colorScheme="orange">
-              Staff vaccinations not required
-            </Badge>
-          )}
-        </Box>
+        <SimpleGrid
+          minChildWidth="250px"
+          columns={2}
+          spacingX={10}
+          marginTop={10}
+        >
+          <Box
+            direction="row"
+            borderWidth="1px"
+            borderRadius="md"
+            shadow="sm"
+            m={2}
+            p={2}
+          >
+            <Text marginBottom="8px" fontSize="md" size="md">
+              Cleaning Protocols:
+            </Text>
+            <Text fontSize="2xl">{safetyOptions.cleaning.description}</Text>
+            {business.vaccineStaff ? (
+              <Badge borderRadius="full" px="2" size="xl" colorScheme="blue">
+                Cleaning protocols are in place
+              </Badge>
+            ) : (
+              <Badge borderRadius="full" px="2" size="xl" colorScheme="orange">
+                Cleaning protocols are not in place
+              </Badge>
+            )}
+          </Box>
+          <Box
+            direction="row"
+            borderWidth="1px"
+            borderRadius="md"
+            shadow="sm"
+            m={2}
+            p={2}
+          >
+            <Text marginBottom="8px" fontSize="md" size="md">
+              Hand Sanitiser Availability for Customer Use:
+            </Text>
+            <Text fontSize="xl">{safetyOptions.handSanitizer.description}</Text>
+            {business.handsanitizer ? (
+              <Badge borderRadius="full" px="2" colorScheme="blue">
+                Avaliable
+              </Badge>
+            ) : (
+              <Badge borderRadius="full" px="2" colorScheme="orange">
+                Not Avaliable
+              </Badge>
+            )}
+          </Box>
+        </SimpleGrid>
+        <SimpleGrid
+          minChildWidth="250px"
+          columns={2}
+          spacingX={10}
+          marginTop={10}
+        >
+          <Box
+            direction="row"
+            borderWidth="1px"
+            borderRadius="md"
+            shadow="sm"
+            m={2}
+            p={2}
+          >
+            <Text marginBottom="8px" fontSize="md" size="md">
+              Vaccination Pass Requirements for Customers/Visitors:
+            </Text>
+            <Text fontSize="xl">{safetyOptions.vaccinePass.description}</Text>
+            {business.vaccinePass ? (
+              <Badge borderRadius="full" px="2" colorScheme="blue">
+                Visitor vaccination pass required
+              </Badge>
+            ) : (
+              <Badge borderRadius="full" px="2" colorScheme="orange">
+                Visitor vaccination pass not required
+              </Badge>
+            )}
+          </Box>
+          <Box
+            // backgroundColor="gray.50"
+            direction="row"
+            borderWidth="1px"
+            borderRadius="md"
+            shadow="sm"
+            m={2}
+            p={2}
+          >
+            <Text marginBottom="8px" fontSize="md" size="md">
+              Staff Vaccination Requirements:
+            </Text>
+            <Text fontSize="xl">
+              {safetyOptions.vaccineRequirement.description}
+            </Text>
+            {business.vaccineStaff ? (
+              <Badge borderRadius="full" px="2" colorScheme="blue">
+                Staff vaccinations required
+              </Badge>
+            ) : (
+              <Badge borderRadius="full" px="2" colorScheme="orange">
+                Staff vaccinations not required
+              </Badge>
+            )}
+          </Box>
+        </SimpleGrid>
       </Box>
     </>
   )

@@ -11,7 +11,7 @@ function ReliabilityScore({ reliabilityPositive, reliabilityNegative }) {
         id="reliabilityScore"
         value={reliabilityScore}
         thickness={15}
-        color="pink.200"
+        color="orange.300"
         capIsRound
       >
         <CircularProgressLabel>{`${reliabilityScore}%`}</CircularProgressLabel>
