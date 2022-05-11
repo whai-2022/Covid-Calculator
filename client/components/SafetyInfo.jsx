@@ -37,20 +37,23 @@ function SafetyInfo({ business }) {
         </Box>
         <Box direction="row">
           <Text>Mask Protocols for Staff: </Text>
-          <ShowStat stat={business.masking} titles={safetyOptions.masking} />
+          <ShowStat
+            stat={business.masking}
+            titles={safetyOptions.masking.options}
+          />
         </Box>
         <Box direction="row">
           <Text>Minimum Spacing Between Customers/Visitors: </Text>
           <ShowStat
             stat={business.minSpacing}
-            titles={safetyOptions.minSpacing}
+            titles={safetyOptions.minSpacing.options}
           />
         </Box>
         <Box direction="row">
           <Text>Ventilation on Site: </Text>
           <ShowStat
             stat={business.ventilation}
-            titles={safetyOptions.ventilation}
+            titles={safetyOptions.ventilation.options}
           />
         </Box>
         <Box direction="row">
