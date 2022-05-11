@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { Box, Heading, Flex } from '@chakra-ui/react'
+import { Box, Heading, Flex, Text } from '@chakra-ui/react'
 
 import { fetchBusiness } from '../actions'
 
 import BusinessDetail from './BusinessDetail.jsx'
 
 import SafetyInfo from './SafetyInfo'
+
+import SafetyInfoExplanation from './SafetyInfoExplanation'
 
 function BusinessListingPage() {
   const dispatch = useDispatch()
@@ -46,6 +48,18 @@ function BusinessListingPage() {
           </Box>
           <Box display={{ base: 'block' }} m={5}>
             <SafetyInfo business={business} />
+          </Box>
+          <Box>
+            <SafetyInfoExplanation display={{ base: 'block' }} m={5} />
+          </Box>
+          <Box>
+            <Text>
+              * Rating calculations are estimated according to data points found
+              on{' '}
+              <a href="https://www.microcovid.org/" color="blue.200">
+                https://www.microcovid.org/
+              </a>
+            </Text>
           </Box>
         </>
       )}

@@ -10,7 +10,7 @@
     ]
   },
   "minSpacing": {
-    "description": "",
+    "description": "The minimum distance the business is able to ensure between each group of customers",
     "options": [
       { "name": "Close (<0.3 metres apart)", "description": "" },
       { "name": "1 metre", "description": "" },
