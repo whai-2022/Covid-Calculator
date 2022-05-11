@@ -33,23 +33,25 @@ function BusinessListingPage() {
 
   return (
     <>
-      <Heading
-        as="h1"
-        size="xl"
-        mb="10"
-        letterSpacing={'tighter'}
-        textAlign="center"
-      >
+      <Heading as="h1" size="2xl" mb="10" textAlign="center" mt="20">
         {business.name}
       </Heading>
+      <Container centerContent>
+        <Badge borderRadius="full" px="2" colorScheme="blue" mt="-7" mb="10">
+          <Text fontSize="md">{business.category}</Text>
+        </Badge>
+      </Container>
       {!isLoading && (
         <>
           <Container
             maxW="2xl"
             borderWidth="1px"
             borderRadius="lg"
+            // borderColor="blue.50"
             mb="16px"
             w="100%"
+            // backgroundColor="blue."
+            shadow="sm"
           >
             <Box display={{ base: 'block' }} m={5}>
               <SimpleGrid
@@ -58,20 +60,11 @@ function BusinessListingPage() {
                 spacingX={10}
                 marginTop={10}
               >
-                <Box
-                  borderWidth="1px"
-                  borderRadius="lg"
-                  mb="16px"
-                  w="100%"
-                  p={3}
-                >
+                <Box mb="16px" w="100%" p={3}>
                   <Heading as="h2" size="md">
                     {'Address'}
                   </Heading>
                   <Text>{business.address}</Text>
-                  <Badge borderRadius="full" px="2" colorScheme="blue">
-                    {business.category}
-                  </Badge>
                 </Box>
                 <Box>
                   <Box>
@@ -102,6 +95,7 @@ function BusinessListingPage() {
             paddingBottom="50px"
             backgroundColor="blue.50"
             marginTop="50px"
+            shadow="md"
           >
             <Text fontSize="xl" marginBottom="10px">
               Help us keep this information accurate

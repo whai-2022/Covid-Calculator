@@ -8,18 +8,11 @@ function SafetyInfo({ business }) {
   return (
     <>
       <Box p="5" borderWidth="0px" borderRadius="lg" mb="16px" w="100%">
-        {/* <Center> */}
         <Heading marginBottom="10px" as="h2" size="lg" color="black">
           Safety info
         </Heading>
-        {/* </Center> */}
         <Box direction="row" p={2}>
-          <Text
-            marginBottom="8px"
-            fontSize="md"
-            size="md"
-            // letterSpacing={'tighter'}
-          >
+          <Text marginBottom="8px" fontSize="md" size="md">
             Mask Protocols for Staff:
           </Text>
           <Text fontSize="xl">{safetyOptions.masking.description}</Text>
@@ -29,12 +22,7 @@ function SafetyInfo({ business }) {
           />
         </Box>
         <Box direction="row" p={2}>
-          <Text
-            marginBottom="8px"
-            fontSize="md"
-            size="md"
-            // letterSpacing={'tighter'}
-          >
+          <Text marginBottom="8px" fontSize="md" size="md">
             Minimum Spacing Between Customers/Visitors:
           </Text>
           <Text fontSize="xl">{safetyOptions.minSpacing.description}</Text>
@@ -44,12 +32,7 @@ function SafetyInfo({ business }) {
           />
         </Box>
         <Box direction="row" p={2}>
-          <Text
-            marginBottom="8px"
-            fontSize="md"
-            size="md"
-            // letterSpacing={'tighter'}
-          >
+          <Text marginBottom="8px" fontSize="md" size="md">
             Ventilation on Site:
           </Text>
           <Text fontSize="xl">{safetyOptions.ventilation.description}</Text>
@@ -64,13 +47,15 @@ function SafetyInfo({ business }) {
           spacingX={10}
           marginTop={10}
         >
-          <Box direction="row" borderWidth="1px" borderRadius="md" m={2} p={2}>
-            <Text
-              marginBottom="8px"
-              fontSize="md"
-              size="md"
-              // letterSpacing={'tighter'}
-            >
+          <Box
+            direction="row"
+            borderWidth="1px"
+            borderRadius="md"
+            shadow="sm"
+            m={2}
+            p={2}
+          >
+            <Text marginBottom="8px" fontSize="md" size="md">
               Cleaning Protocols:
             </Text>
             <Text fontSize="2xl">{safetyOptions.cleaning.description}</Text>
@@ -84,13 +69,15 @@ function SafetyInfo({ business }) {
               </Badge>
             )}
           </Box>
-          <Box direction="row" borderWidth="1px" borderRadius="md" m={2} p={2}>
-            <Text
-              marginBottom="8px"
-              fontSize="md"
-              size="md"
-              // letterSpacing={'tighter'}
-            >
+          <Box
+            direction="row"
+            borderWidth="1px"
+            borderRadius="md"
+            shadow="sm"
+            m={2}
+            p={2}
+          >
+            <Text marginBottom="8px" fontSize="md" size="md">
               Hand Sanitiser Availability for Customer Use:
             </Text>
             <Text fontSize="xl">{safetyOptions.handSanitizer.description}</Text>
@@ -111,13 +98,15 @@ function SafetyInfo({ business }) {
           spacingX={10}
           marginTop={10}
         >
-          <Box direction="row" borderWidth="1px" borderRadius="md" m={2} p={2}>
-            <Text
-              marginBottom="8px"
-              fontSize="md"
-              size="md"
-              // letterSpacing={'tighter'}
-            >
+          <Box
+            direction="row"
+            borderWidth="1px"
+            borderRadius="md"
+            shadow="sm"
+            m={2}
+            p={2}
+          >
+            <Text marginBottom="8px" fontSize="md" size="md">
               Vaccination Pass Requirements for Customers/Visitors:
             </Text>
             <Text fontSize="xl">{safetyOptions.vaccinePass.description}</Text>
@@ -131,13 +120,16 @@ function SafetyInfo({ business }) {
               </Badge>
             )}
           </Box>
-          <Box direction="row" borderWidth="1px" borderRadius="md" m={2} p={2}>
-            <Text
-              marginBottom="8px"
-              fontSize="md"
-              size="md"
-              // letterSpacing={'tighter'}
-            >
+          <Box
+            // backgroundColor="gray.50"
+            direction="row"
+            borderWidth="1px"
+            borderRadius="md"
+            shadow="sm"
+            m={2}
+            p={2}
+          >
+            <Text marginBottom="8px" fontSize="md" size="md">
               Staff Vaccination Requirements:
             </Text>
             <Text fontSize="xl">

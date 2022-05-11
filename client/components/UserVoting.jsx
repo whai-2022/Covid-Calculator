@@ -41,7 +41,7 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
       <span>This was my experience</span>
       <Tag
         p={3}
-        size={'lg'}
+        size={'sm'}
         variant={'solid'}
         colorScheme={'telegram'}
         opacity={'0.8'}
@@ -49,7 +49,7 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
         onClick={() => handlePositiveSubmit(id)}
       >
         <TagLeftIcon
-          boxSize={14}
+          boxSize={8}
           as={FaThumbsUp}
           color="white"
           value={reliabilityPositive}
@@ -63,7 +63,7 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
       </Tag>
       <Tag
         p={3}
-        size={'lg'}
+        size={'sm'}
         variant={'solid'}
         colorScheme={'telegram'}
         opacity={'0.8'}
@@ -76,7 +76,7 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
           </Stat>
         </TagLabel>
         <TagRightIcon
-          boxSize={14}
+          boxSize={8}
           as={FaThumbsDown}
           color="white"
           value={reliabilityNegative}
