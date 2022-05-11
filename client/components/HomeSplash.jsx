@@ -11,6 +11,7 @@ import {
   Avatar,
 } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
+import { Link as RouterLink } from 'react-router-dom'
 
 function HomeSplash() {
   return (
@@ -34,7 +35,7 @@ function HomeSplash() {
               algorithms to determine the risk rating before stepping into that
               shop, cafe or even healthcare provider.
             </Text>
-            <Link to="cities" color="whiteAlpha.800">
+            <Link as={RouterLink} to="cities" color="whiteAlpha.800">
               Explore the app to learn more
               <Icon as={FiArrowUpRight} ml="10px" h={5} w={5} />
             </Link>
@@ -52,7 +53,7 @@ function HomeSplash() {
               Dan Abramov
             </Heading>
             <Text fontSize={12} color="gray.500">
-              Lives in the Grey Lynn Community
+              Visited the Grey Lynn Community
             </Text>
           </Box>
         </Flex>
