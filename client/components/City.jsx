@@ -1,6 +1,13 @@
 import React from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { Heading, UnorderedList, ListItem, Box } from '@chakra-ui/react'
+import {
+  Heading,
+  UnorderedList,
+  ListItem,
+  Box,
+  Flex,
+  Img,
+} from '@chakra-ui/react'
 
 import locations from '../data/locations.json'
 
@@ -45,11 +52,14 @@ function City() {
   }
 
   return (
-    <>
+    <Flex justifyContent="space-evenly">
       <Box key={currentCity} padding={5}>
         {createList(currentCity)}
       </Box>
-    </>
+      {/* <AspectRatio ratio={1}>*/}
+      <Img src={`/images/${currentCity}.jpeg`} borderRadius="60px" w="50%" />
+      {/* </AspectRatio> */}
+    </Flex>
   )
 }
 
