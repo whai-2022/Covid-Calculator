@@ -1,6 +1,14 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { HStack, Box, Icon, StatNumber, Stat } from '@chakra-ui/react'
+import {
+  HStack,
+  StatNumber,
+  Stat,
+  Tag,
+  TagLabel,
+  TagLeftIcon,
+  TagRightIcon,
+} from '@chakra-ui/react'
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa'
 import { postThumbDown, postThumbUp } from '../apis/voting'
 import { fetchBusiness } from '../actions/business'
@@ -29,30 +37,53 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
   }
 
   return (
-    <Box>
-      <HStack mt={8} mb={48}>
-        <Icon
-          boxSize={14}
+    <HStack color="blue.900">
+      <span>This was my experience</span>
+      <Tag
+        p={3}
+        size={'sm'}
+        variant={'solid'}
+        colorScheme={'telegram'}
+        opacity={'0.8'}
+        cursor={'pointer'}
+        onClick={() => handlePositiveSubmit(id)}
+      >
+        <TagLeftIcon
+          boxSize={8}
           as={FaThumbsUp}
-          color="teal"
+          color="white"
           value={reliabilityPositive}
-          onClick={() => handlePositiveSubmit(id)}
-        ></Icon>
-        <Stat>
-          <StatNumber>{reliabilityPositive}</StatNumber>
-        </Stat>
-        <Icon
-          boxSize={14}
+        />
+        <TagLabel>
+          {' '}
+          <Stat>
+            <StatNumber>{reliabilityPositive}</StatNumber>
+          </Stat>
+        </TagLabel>
+      </Tag>
+      <Tag
+        p={3}
+        size={'sm'}
+        variant={'solid'}
+        colorScheme={'telegram'}
+        opacity={'0.8'}
+        cursor={'pointer'}
+        onClick={() => handleNegativeSubmit(id)}
+      >
+        <TagLabel>
+          <Stat>
+            <StatNumber>{reliabilityNegative}</StatNumber>
+          </Stat>
+        </TagLabel>
+        <TagRightIcon
+          boxSize={8}
           as={FaThumbsDown}
-          color="teal"
+          color="white"
           value={reliabilityNegative}
-          onClick={() => handleNegativeSubmit(id)}
-        ></Icon>
-        <Stat>
-          <StatNumber>{reliabilityNegative}</StatNumber>
-        </Stat>
-      </HStack>
-    </Box>
+        />
+      </Tag>
+      <span>{`This wasn't my experience`}</span>
+    </HStack>
   )
 }
 

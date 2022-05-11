@@ -19,7 +19,7 @@ function BusinessDetail({
       <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="100%">
         <Link as={RouterLink} to={`/businesses/${id}`}>
           <Heading as="h2" size="md">
-            {name}
+            {showDetails ? name : 'Info:'}
           </Heading>
         </Link>
         <Text>{address}</Text>
@@ -40,7 +40,7 @@ function BusinessDetail({
             </Link>
           </Text>
         )}
-        <Badge borderRadius="full" px="2" colorScheme="teal">
+        <Badge borderRadius="full" px="2" colorScheme="blue">
           {category}
         </Badge>
       </Box>
