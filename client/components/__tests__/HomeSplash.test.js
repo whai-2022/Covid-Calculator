@@ -16,7 +16,7 @@ describe('<HomeSplash/>', () => {
       return heading.innerHTML
     })
     expect.assertions(2)
-    expect(headings[0]).toContain('Wherever you are')
-    expect(headings[1]).toContain('Dan')
+    expect(headings[0]).toContain('Covid Calculator')
+    expect(headings[1]).toContain('Wherever you are')
   })
 })

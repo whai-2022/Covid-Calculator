@@ -4,7 +4,6 @@ function HomeIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsVectornator="http://vectornator.io"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit="10"
@@ -24,7 +23,7 @@ function HomeIcon() {
           <stop offset="0.972" stopColor="#f9941e"></stop>
         </linearGradient>
       </defs>
-      <g fillRule="evenodd" vectornatorLayerName="Untitled">
+      <g fillRule="evenodd">
         <path
           fill="#96c5da"
           fillOpacity="0.362"

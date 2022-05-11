@@ -4,7 +4,6 @@ function PhoneIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsVectornator="http://vectornator.io"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeMiterlimit="10"
@@ -103,7 +102,7 @@ function PhoneIcon() {
           <stop offset="0.997" stopColor="#44983b"></stop>
         </linearGradient>
       </defs>
-      <g fillRule="evenodd" vectornatorLayerName="Untitled">
+      <g fillRule="evenodd">
         <path
           fill="#96c5da"
           fillOpacity="0.362"
@@ -182,7 +181,7 @@ function PhoneIcon() {
           d="M249.669 220.067h.227c1.347 17.89 15.538 18.165 15.538 18.165s-15.649.286-15.649 20.957c0-20.671-15.648-20.957-15.648-20.957s14.185-.275 15.532-18.165z"
         ></path>
       </g>
-      <g fillRule="evenodd" vectornatorLayerName="Layer 3">
+      <g fillRule="evenodd">
         <path
           fill="url(#LinearGradient_8)"
           d="M435.544 239.78l-13.44-31.467c-5.4-12.646 3.876-26.696 17.627-26.696 13.353 0 22.361 13.653 17.117 25.923l-13.77 32.24a4.098 4.098 0 01-3.767 2.488c-1.64 0-3.122-.98-3.767-2.488z"
