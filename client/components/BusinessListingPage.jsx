@@ -54,10 +54,8 @@ function BusinessListingPage() {
             maxW="2xl"
             borderWidth="1px"
             borderRadius="lg"
-            // borderColor="blue.50"
             mb="16px"
             w="100%"
-            // backgroundColor="blue."
             shadow="sm"
           >
             <Box display={{ base: 'block' }} m={5}>

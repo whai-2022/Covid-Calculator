@@ -121,7 +121,6 @@ function SafetyInfo({ business }) {
             )}
           </Box>
           <Box
-            // backgroundColor="gray.50"
             direction="row"
             borderWidth="1px"
             borderRadius="md"
