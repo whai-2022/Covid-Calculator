@@ -3,7 +3,7 @@ const db = require('../db')
 const router = express.Router()
 
 router.get('/:id', (req, res) => {
-  db.getBusinessById(req.params.id)
+  db.getBusinessAndSafetyInfoById(req.params.id)
     .then((business) => {
       res.json(business)
       return null
