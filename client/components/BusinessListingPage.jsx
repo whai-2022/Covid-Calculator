@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Box, Heading, Flex, Text } from '@chakra-ui/react'
-import Rating from './Rating'
-import ReliabilityScore from './ReliabilityScore'
 import UserVoting from './UserVoting'
 import { fetchBusiness } from '../actions'
 
@@ -63,7 +61,6 @@ function BusinessListingPage() {
               </a>
             </Text>
           </Box>
-          {!isLoading && <Rating safetyData={business} />}
           {!isLoading && (
             <UserVoting
               reliabilityPositive={business.reliability_positive}
