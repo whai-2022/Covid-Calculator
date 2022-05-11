@@ -8,7 +8,6 @@ import {
   Popover,
   PopoverArrow,
   PopoverCloseButton,
-  PopoverHeader,
   PopoverBody,
   PopoverContent,
   PopoverTrigger,
@@ -48,12 +47,14 @@ function ShowStat({ stat, titles }) {
         return (
           <Popover key={title.name} trigger={'hover'} placement="top-start">
             <PopoverTrigger>{generateTag(title, i)}</PopoverTrigger>
-            <PopoverContent color="white" bg="blue.600" borderColor="blue.600">
+            <PopoverContent
+              color="white"
+              bg="blue.600"
+              borderColor="blue.600"
+              w={'200px'}
+            >
               <PopoverArrow />
               <PopoverCloseButton />
-              <PopoverHeader pt={4} fontWeight="bold">
-                {title.name}
-              </PopoverHeader>
               <PopoverBody>{title.description}</PopoverBody>
             </PopoverContent>
           </Popover>
