@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { Box, Heading, Flex, Text } from '@chakra-ui/react'
+import { Box, Heading, Flex, Text, Container } from '@chakra-ui/react'
 import UserVoting from './UserVoting'
 import { fetchBusiness } from '../actions'
 
@@ -49,6 +49,15 @@ function BusinessListingPage() {
           <Box display={{ base: 'block' }} m={5}>
             <SafetyInfo business={business} />
           </Box>
+          <Container maxW="2xl" centerContent>
+            {!isLoading && (
+              <UserVoting
+                reliabilityPositive={business.reliability_positive}
+                reliabilityNegative={business.reliability_negative}
+                id={business.id}
+              />
+            )}
+          </Container>
           <Box>
             <SafetyInfoExplanation display={{ base: 'block' }} m={5} />
           </Box>
@@ -61,13 +70,6 @@ function BusinessListingPage() {
               </a>
             </Text>
           </Box>
-          {!isLoading && (
-            <UserVoting
-              reliabilityPositive={business.reliability_positive}
-              reliabilityNegative={business.reliability_negative}
-              id={business.id}
-            />
-          )}
         </>
       )}
     </>
