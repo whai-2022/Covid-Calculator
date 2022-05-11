@@ -14,14 +14,14 @@ function SafetyInfo({ business }) {
         </Heading>
         {/* </Center> */}
         <Box direction="row" p={2}>
-          <Heading
+          <Text
             marginBottom="8px"
-            as="h5"
+            fontSize="md"
             size="md"
-            letterSpacing={'tighter'}
+            // letterSpacing={'tighter'}
           >
             Mask Protocols for Staff:
-          </Heading>
+          </Text>
           <Text fontSize="xl">{safetyOptions.masking.description}</Text>
           <ShowStat
             stat={business.masking}
@@ -29,14 +29,14 @@ function SafetyInfo({ business }) {
           />
         </Box>
         <Box direction="row" p={2}>
-          <Heading
+          <Text
             marginBottom="8px"
-            as="h5"
+            fontSize="md"
             size="md"
-            letterSpacing={'tighter'}
+            // letterSpacing={'tighter'}
           >
             Minimum Spacing Between Customers/Visitors:
-          </Heading>
+          </Text>
           <Text fontSize="xl">{safetyOptions.minSpacing.description}</Text>
           <ShowStat
             stat={business.minSpacing}
@@ -44,50 +44,55 @@ function SafetyInfo({ business }) {
           />
         </Box>
         <Box direction="row" p={2}>
-          <Heading
+          <Text
             marginBottom="8px"
-            as="h5"
+            fontSize="md"
             size="md"
-            letterSpacing={'tighter'}
+            // letterSpacing={'tighter'}
           >
             Ventilation on Site:
-          </Heading>
+          </Text>
           <Text fontSize="xl">{safetyOptions.ventilation.description}</Text>
           <ShowStat
             stat={business.ventilation}
             titles={safetyOptions.ventilation.options}
           />
         </Box>
-        <SimpleGrid minChildWidth="250px" columns={2} spacingX={10}>
+        <SimpleGrid
+          minChildWidth="250px"
+          columns={2}
+          spacingX={10}
+          marginTop={10}
+        >
           <Box direction="row" borderWidth="1px" borderRadius="md" m={2} p={2}>
-            <Heading
+            <Text
               marginBottom="8px"
-              as="h5"
+              fontSize="md"
               size="md"
-              letterSpacing={'tighter'}
+              // letterSpacing={'tighter'}
             >
               Cleaning Protocols:
-            </Heading>
-            <Text fontSize="xl">{safetyOptions.cleaning.description}</Text>
+            </Text>
+            <Text fontSize="2xl">{safetyOptions.cleaning.description}</Text>
             {business.vaccineStaff ? (
               <Badge borderRadius="full" px="2" size="xl" colorScheme="blue">
-                In place
+                Cleaning protocols are in place
               </Badge>
             ) : (
               <Badge borderRadius="full" px="2" size="xl" colorScheme="orange">
-                Not in place
+                Cleaning protocols are not in place
               </Badge>
             )}
           </Box>
           <Box direction="row" borderWidth="1px" borderRadius="md" m={2} p={2}>
-            <Heading
+            <Text
               marginBottom="8px"
-              as="h5"
+              fontSize="md"
               size="md"
-              letterSpacing={'tighter'}
+              // letterSpacing={'tighter'}
             >
               Hand Sanitiser Availability for Customer Use:
-            </Heading>
+            </Text>
             <Text fontSize="xl">{safetyOptions.handSanitizer.description}</Text>
             {business.handsanitizer ? (
               <Badge borderRadius="full" px="2" colorScheme="blue">
@@ -100,16 +105,21 @@ function SafetyInfo({ business }) {
             )}
           </Box>
         </SimpleGrid>
-        <SimpleGrid minChildWidth="250px" columns={2} spacingX={10}>
+        <SimpleGrid
+          minChildWidth="250px"
+          columns={2}
+          spacingX={10}
+          marginTop={10}
+        >
           <Box direction="row" borderWidth="1px" borderRadius="md" m={2} p={2}>
-            <Heading
+            <Text
               marginBottom="8px"
-              as="h5"
+              fontSize="md"
               size="md"
-              letterSpacing={'tighter'}
+              // letterSpacing={'tighter'}
             >
               Vaccination Pass Requirements for Customers/Visitors:
-            </Heading>
+            </Text>
             <Text fontSize="xl">{safetyOptions.vaccinePass.description}</Text>
             {business.vaccinePass ? (
               <Badge borderRadius="full" px="2" colorScheme="blue">
@@ -122,14 +132,14 @@ function SafetyInfo({ business }) {
             )}
           </Box>
           <Box direction="row" borderWidth="1px" borderRadius="md" m={2} p={2}>
-            <Heading
+            <Text
               marginBottom="8px"
-              as="h5"
+              fontSize="md"
               size="md"
-              letterSpacing={'tighter'}
+              // letterSpacing={'tighter'}
             >
               Staff Vaccination Requirements:
-            </Heading>
+            </Text>
             <Text fontSize="xl">
               {safetyOptions.vaccineRequirement.description}
             </Text>

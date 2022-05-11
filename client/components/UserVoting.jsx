@@ -43,7 +43,8 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
         p={3}
         size={'lg'}
         variant={'solid'}
-        colorScheme={'facebook'}
+        colorScheme={'telegram'}
+        opacity={'0.8'}
         cursor={'pointer'}
         onClick={() => handlePositiveSubmit(id)}
       >
@@ -64,7 +65,8 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
         p={3}
         size={'lg'}
         variant={'solid'}
-        colorScheme={'facebook'}
+        colorScheme={'telegram'}
+        opacity={'0.8'}
         cursor={'pointer'}
         onClick={() => handleNegativeSubmit(id)}
       >

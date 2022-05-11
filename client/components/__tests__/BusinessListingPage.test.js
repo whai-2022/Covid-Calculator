@@ -24,7 +24,7 @@ describe('<BusinessListingPage/>', () => {
       </Provider>
     )
     expect.assertions(2)
-    expect(screen.getAllByRole('heading')[1]).toHaveTextContent('Info')
+    expect(screen.getAllByRole('heading')[1]).toHaveTextContent('Address')
     expect(screen.getAllByRole('heading')[1]).not.toHaveTextContent(
       'Weird No Words'
     )

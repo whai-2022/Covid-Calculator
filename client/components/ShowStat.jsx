@@ -19,11 +19,11 @@ function ShowStat({ stat, titles }) {
     return (
       <Tag
         p={3}
-        size={i == stat ? 'lg' : 'lg'}
+        size={i == stat ? 'md' : 'md'}
         key={title.name}
         variant={i == stat ? 'solid' : 'solid'}
-        colorScheme={i == stat ? 'facebook' : 'gray'}
-        opacity={i == stat ? '1' : '0.7'}
+        colorScheme={i == stat ? 'telegram' : 'gray'}
+        opacity={i == stat ? '0.8' : '0.7'}
       >
         <TagLeftIcon
           boxSize={i == stat ? '20px' : '0.001px'}

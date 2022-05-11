@@ -1,8 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { Box, Heading, Flex, Text, Container } from '@chakra-ui/react'
-import BusinessDetail from './BusinessDetail'
+import {
+  Box,
+  Badge,
+  Heading,
+  Text,
+  Container,
+  SimpleGrid,
+} from '@chakra-ui/react'
+import RatingScore from './RatingScore'
+import ReliabilityScore from './ReliabilityScore'
 import SafetyInfo from './SafetyInfo'
 import UserVoting from './UserVoting'
 
@@ -25,30 +33,83 @@ function BusinessListingPage() {
 
   return (
     <>
-      <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-          {business.name}
-        </Heading>
-      </Flex>{' '}
+      <Heading
+        as="h1"
+        size="xl"
+        mb="10"
+        letterSpacing={'tighter'}
+        textAlign="center"
+      >
+        {business.name}
+      </Heading>
       {!isLoading && (
         <>
-          <Box display={{ base: 'block' }} m={5}>
-            <BusinessDetail
-              key={business.id}
-              name={business.name}
-              address={business.address}
-              category={business.category}
-              reliabilityPositive={business.reliabilityPositive}
-              reliabilityNegative={business.reliabilityNegative}
-              rating={business.rating}
-              id={business.id}
-              showDetails={false}
-            />
-          </Box>
+          <Container
+            maxW="2xl"
+            borderWidth="1px"
+            borderRadius="lg"
+            mb="16px"
+            w="100%"
+          >
+            <Box display={{ base: 'block' }} m={5}>
+              <SimpleGrid
+                minChildWidth="250px"
+                columns={2}
+                spacingX={10}
+                marginTop={10}
+              >
+                <Box
+                  borderWidth="1px"
+                  borderRadius="lg"
+                  mb="16px"
+                  w="100%"
+                  p={3}
+                >
+                  <Heading as="h2" size="md">
+                    {'Address'}
+                  </Heading>
+                  <Text>{business.address}</Text>
+                  <Badge borderRadius="full" px="2" colorScheme="blue">
+                    {business.category}
+                  </Badge>
+                </Box>
+                <Box>
+                  <Box>
+                    Rating: <RatingScore score={business.rating} />
+                  </Box>
+                  <Box>
+                    Reliability Score:{' '}
+                    <ReliabilityScore
+                      reliabilityPositive={business.reliabilityPositive}
+                      reliabilityNegative={business.reliabilityNegative}
+                    />{' '}
+                  </Box>
+                </Box>
+              </SimpleGrid>
+            </Box>
+          </Container>
           <Box display={{ base: 'block' }} m={5}>
             <SafetyInfo business={business} />
           </Box>
-          <Container maxW="2xl" centerContent>
+          <Container
+            maxW="5xl"
+            centerContent
+            borderWidth="1px"
+            borderRadius="50"
+            mb="16px"
+            w="100%"
+            paddingTop="50px"
+            paddingBottom="50px"
+            backgroundColor="blue.50"
+            marginTop="50px"
+          >
+            <Text fontSize="xl" marginBottom="10px">
+              Help us keep this information accurate
+            </Text>
+            <Text marginBottom="10">
+              Does this information reflect your most recent experience at this
+              business?
+            </Text>
             {!isLoading && (
               <UserVoting
                 reliabilityPositive={business.reliability_positive}
@@ -57,7 +118,7 @@ function BusinessListingPage() {
               />
             )}
           </Container>
-          <Box>
+          <Box marginTop={10}>
             <SafetyInfoExplanation display={{ base: 'block' }} m={5} />
           </Box>
           <Box>

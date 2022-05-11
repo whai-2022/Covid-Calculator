@@ -25,9 +25,9 @@
     "ventilation": {
       "description": "",
       "options": [
-        { "name": "Indoor with low ventilation", "description": "" },
-        { "name": "Indoors with moderate Ventilation", "description": "" },
-        { "name": "Outdoor", "description": "" }
+        { "name": "Indoor with low ventilation", "description": "Potential for closed windows/doors and low airflow from outside" },
+        { "name": "Indoors with moderate Ventilation", "description": "Potential for windows/doors open and good airflow from outside" },
+        { "name": "Outdoor", "description": "Tables and chairs outdoors or an outdoor activity" }
       ]
     }
   }
