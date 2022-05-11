@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
 import {
   Heading,
   SimpleGrid,
@@ -8,6 +8,7 @@ import {
   Box,
   Img,
   Center,
+  Link,
 } from '@chakra-ui/react'
 
 import locations from '../data/locations.json'
@@ -36,14 +37,19 @@ function CitiesSuburbs() {
   function createList(city) {
     return (
       <>
-        <Heading as="h2" size="xl" letterSpacing={'tighter'}>
-          {city}
-        </Heading>
+        <Link as={RouterLink} to={`/cities/${city}`} color="blue.900">
+          <Heading as="h2" size="xl" letterSpacing={'tighter'}>
+            {city}
+          </Heading>
+        </Link>
         <UnorderedList padding={5}>
           {locations[city].map((suburb) => {
             return (
               <ListItem key={suburb} fontSize="2xl">
-                <Link to={`/cities/${formatName(city)}/${formatName(suburb)}`}>
+                <Link
+                  as={RouterLink}
+                  to={`/cities/${formatName(city)}/${formatName(suburb)}`}
+                >
                   {suburb}
                 </Link>
               </ListItem>
