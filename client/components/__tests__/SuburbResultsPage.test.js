@@ -28,13 +28,6 @@ beforeAll(() => {
   )
 })
 
-// MapContainer.mockReturnValue(
-//   <div aria-label="map">Hello World from the Map Container</div>
-// )
-// BusinessList.mockReturnValue(
-//   <div aria-label="businesses">Hello World from the Map Container</div>
-// )
-
 jest.mock('../MapContainer', () => {
   return {
     __esModule: true,

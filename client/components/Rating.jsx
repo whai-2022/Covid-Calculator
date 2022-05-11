@@ -13,8 +13,7 @@ function Rating(props) {
     handSanitizer,
     masking,
     minSpacing,
-    // vaccinePass,
-    // vaccineStaff,
+
     ventilation,
   } = safetyData
 
@@ -22,16 +21,14 @@ function Rating(props) {
   const handSet = [1, 1 / 2]
   const maskingSet = [1, 0.33, 0.25, 0.166, 0.0625]
   const spacingSet = [1, 0.5, 0.25]
-  // const vaccinePassSet = [1, 1]
-  // const vaccineStaffSet = [1, 1]
+
   const ventilationSet = [1, 0.25, 0.05]
 
   const cleaningMult = cleaningSet[cleaningProtocol]
   const handMult = handSet[handSanitizer]
   const maskingMult = maskingSet[masking]
   const spacingMult = spacingSet[minSpacing]
-  // const vaccinePassMult = vaccinePassSet[vaccinePass]
-  // const vaccineStaffMult = vaccineStaffSet[vaccineStaff]
+
   const ventilationMult = ventilationSet[ventilation]
 
   const baseRisk = 100
@@ -42,8 +39,6 @@ function Rating(props) {
         handMult * 5 +
         maskingMult * 30 +
         spacingMult * 30 +
-        // vaccinePassMult * 10 +
-        // vaccineStaffMult * 10 +
         ventilationMult * 30
     )
     const score = Math.trunc(baseRisk - risk)
