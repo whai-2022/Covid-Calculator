@@ -3,30 +3,32 @@
   "handSanitizer": { "description": "" },
   "vaccinePass": { "description": "" },
   "vaccineRequirement": { "description": "" },
-  "masking": {
-    "description": "test subheading",
-    "options": [
-      { "name": "None/Cloth", "description": "test hover" },
-      { "name": "Thick Cloth", "description": "test hover 2" },
-      { "name": "Surgical Mask", "description": "test hover 3" },
-      { "name": "N95. KN85, FFP2", "description": "" },
-      { "name": "N95 Sealed", "description": "" }
-    ]
-  },
-  "minSpacing": {
-    "description": "The minimum distance the business is able to ensure between each group of customers",
-    "options": [
-      { "name": "Close (<0.3 metres apart)", "description": "" },
-      { "name": "1 metre", "description": "" },
-      { "name": "2 metres+", "description": "" }
-    ]
-  },
-  "ventilation": {
-    "description": "test subheading ventilation",
-    "options": [
-      { "name": "Indoor", "description": "" },
-      { "name": "Moderate Ventilation", "description": "" },
-      { "name": "Outdoor", "description": "" }
-    ]
+    "masking": {
+      "description": "",
+      "options": [
+        { "name": "None/Light Cloth", "description": "No mask, possibly eating or drinking. Cloth mask, thin or loose (bandana, buff; or: loose fit, falls down)" },
+        { "name": "Thick Cloth", "description": "Multi-layer cloth mask with tight, secure fit" },
+        { "name": "Surgical Mask/Cloth Mask with Filter", "description": "Loose-fitting disposable blue (or green) surgical mask" },
+        { "name": "N95. KN85, FFP2", "description": "It fits, but you are NOT sure if it is sealed" },
+        { "name": "N95 Sealed", "description": "Air-tight seal. No valve, no earloops, no beard" }
+      ]
+    },
+    "minSpacing": {
+      "description": "",
+      "options": [
+        { "name": "Less than 0.3 metres", "description": "Closer than normal socialising" },
+        { "name": "1 metre", "description": "Normal socialising without any distancing measures in place" },
+        { "name": "2 metres", "description": "Individuals and groups can maintain min 2m distance" },
+        { "name": "More than 3 metres", "description": "Individuals and groups can maintain min 3m distance" }
+      ]
+    },
+    "ventilation": {
+      "description": "",
+      "options": [
+        { "name": "Indoor with low ventilation", "description": "" },
+        { "name": "Indoors with moderate Ventilation", "description": "" },
+        { "name": "Outdoor", "description": "" }
+      ]
+    }
   }
-}
+  

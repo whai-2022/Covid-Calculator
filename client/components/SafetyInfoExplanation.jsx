@@ -18,7 +18,7 @@ function SafetyInfoExplanation() {
         borderWidth="0px"
         borderRadius="lg"
         mb="16px"
-        w="60%"
+        w="100%"
         marginTop="100px"
       >
         <>
@@ -50,10 +50,11 @@ function SafetyInfoExplanation() {
                 </AccordionButton>
               </h2>
               <AccordionPanel pb={4}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                This refers to the rules a business may have in place around
+                their staff and mask wearing. While there is not a 100%
+                guarantee of compliance by staff, having protocols in place for
+                mask wearing increases the likelihood of masks being worn by
+                staff when you might come into contact with them.
               </AccordionPanel>
             </AccordionItem>
 

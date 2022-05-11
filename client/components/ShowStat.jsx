@@ -19,11 +19,11 @@ function ShowStat({ stat, titles }) {
     return (
       <Tag
         p={3}
-        size={i == stat ? 'lg' : 'md'}
+        size={i == stat ? 'lg' : 'lg'}
         key={title.name}
         variant={i == stat ? 'solid' : 'solid'}
-        colorScheme={i == stat ? 'teal' : 'gray'}
-        opacity={i == stat ? '1' : '0.4'}
+        colorScheme={i == stat ? 'facebook' : 'gray'}
+        opacity={i == stat ? '1' : '0.7'}
       >
         <TagLeftIcon
           boxSize={i == stat ? '20px' : '0.001px'}
@@ -49,9 +49,10 @@ function ShowStat({ stat, titles }) {
             <PopoverTrigger>{generateTag(title, i)}</PopoverTrigger>
             <PopoverContent
               color="white"
-              bg="blue.600"
-              borderColor="blue.600"
+              bg="blue.700"
+              borderColor="blue.700"
               w={'200px'}
+              padding="1px"
             >
               <PopoverArrow />
               <PopoverCloseButton />

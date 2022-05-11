@@ -29,30 +29,31 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
   }
 
   return (
-    <Box>
-      <HStack mt={8} mb={48}>
-        <Icon
-          boxSize={14}
-          as={FaThumbsUp}
-          color="teal"
-          value={reliabilityPositive}
-          onClick={() => handlePositiveSubmit(id)}
-        ></Icon>
-        <Stat>
-          <StatNumber>{reliabilityPositive}</StatNumber>
-        </Stat>
-        <Icon
-          boxSize={14}
-          as={FaThumbsDown}
-          color="teal"
-          value={reliabilityNegative}
-          onClick={() => handleNegativeSubmit(id)}
-        ></Icon>
-        <Stat>
-          <StatNumber>{reliabilityNegative}</StatNumber>
-        </Stat>
-      </HStack>
-    </Box>
+    <HStack bg="blue.200" color="blue.900" borderRadius={15} p={3}>
+      <span>This was my experience</span>
+      <Icon
+        boxSize={14}
+        as={FaThumbsUp}
+        color="white"
+        value={reliabilityPositive}
+        onClick={() => handlePositiveSubmit(id)}
+      ></Icon>
+      <Stat>
+        <StatNumber>{reliabilityPositive}</StatNumber>
+      </Stat>
+      <Box bg="white"></Box>
+      <Stat>
+        <StatNumber>{reliabilityNegative}</StatNumber>
+      </Stat>
+      <Icon
+        boxSize={14}
+        as={FaThumbsDown}
+        color="white"
+        value={reliabilityNegative}
+        onClick={() => handleNegativeSubmit(id)}
+      ></Icon>
+      <span>{`This wasn't my experience`}</span>
+    </HStack>
   )
 }
 

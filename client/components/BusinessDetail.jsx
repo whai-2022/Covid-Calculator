@@ -19,7 +19,7 @@ function BusinessDetail({
       <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="100%">
         <Link as={RouterLink} to={`/businesses/${id}`}>
           <Heading as="h2" size="md">
-            {name}
+            {showDetails ? name : 'Info:'}
           </Heading>
         </Link>
         <Text>{address}</Text>
