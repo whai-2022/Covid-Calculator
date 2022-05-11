@@ -33,7 +33,14 @@ function BusinessListingPage() {
 
   return (
     <>
-      <Heading as="h1" size="2xl" mb="10" textAlign="center" mt="20">
+      <Heading
+        color="blue.900"
+        as="h1"
+        size="2xl"
+        mb="10"
+        textAlign="center"
+        mt="20"
+      >
         {business.name}
       </Heading>
       <Container centerContent>

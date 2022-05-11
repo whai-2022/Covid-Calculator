@@ -28,6 +28,7 @@ function SafetyInfoExplanation() {
               size="md"
               letterSpacing={'tighter'}
               marginBottom="10px"
+              color="blue.900"
             >
               More Information{' '}
             </Heading>

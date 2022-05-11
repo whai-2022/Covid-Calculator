@@ -16,7 +16,7 @@ function BusinessDetail({
 }) {
   return (
     <Center>
-      <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="100%">
+      <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="400px">
         <Link as={RouterLink} to={`/businesses/${id}`}>
           <Heading as="h2" size="md">
             {showDetails ? name : 'Info:'}

@@ -8,7 +8,7 @@ function SafetyInfo({ business }) {
   return (
     <>
       <Box p="5" borderWidth="0px" borderRadius="lg" mb="16px" w="100%">
-        <Heading marginBottom="10px" as="h2" size="lg" color="black">
+        <Heading color="blue.900" marginBottom="10px" as="h2" size="lg">
           Safety info
         </Heading>
         <Box direction="row" p={2}>
