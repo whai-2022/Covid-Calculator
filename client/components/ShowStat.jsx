@@ -46,12 +46,14 @@ function ShowStat({ stat, titles }) {
     <HStack direction="row" spacing={3}>
       {titles.map((title, i) => {
         return (
-          <Popover key={title.name} trigger={'hover'}>
+          <Popover key={title.name} trigger={'hover'} placement="top-start">
             <PopoverTrigger>{generateTag(title, i)}</PopoverTrigger>
-            <PopoverContent>
+            <PopoverContent color="white" bg="blue.600" borderColor="blue.600">
               <PopoverArrow />
               <PopoverCloseButton />
-              <PopoverHeader>{title.name}</PopoverHeader>
+              <PopoverHeader pt={4} fontWeight="bold">
+                {title.name}
+              </PopoverHeader>
               <PopoverBody>{title.description}</PopoverBody>
             </PopoverContent>
           </Popover>
