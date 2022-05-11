@@ -27,7 +27,7 @@ function Navbar() {
     >
       <Flex align="center" mr={5}>
         <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-        <Link to="/">Covid Calculator</Link> 
+          <Link to="/">Covid Calculator</Link>
         </Heading>
       </Flex>
       <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>
