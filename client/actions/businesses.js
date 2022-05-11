@@ -1,7 +1,7 @@
 import api from '../apis'
+import { setError } from './index'
 
 export const RECEIVE_BUSINESSES = 'RECEIVE_BUSINESSES'
-export const SET_ERROR = 'SET_ERROR'
 
 export function receiveBusinesses(businesses) {
   return {
@@ -22,12 +22,5 @@ export function getBusinesses() {
         dispatch(setError(err.message))
         console.log(err)
       })
-  }
-}
-
-export function setError(errMessage) {
-  return {
-    type: SET_ERROR,
-    errMessage,
   }
 }

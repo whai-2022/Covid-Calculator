@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Box, Heading, Flex, Text } from '@chakra-ui/react'
-
+import Rating from './Rating'
+import ReliabilityScore from './ReliabilityScore'
+import UserVoting from './UserVoting'
 import { fetchBusiness } from '../actions'
 
 import BusinessDetail from './BusinessDetail.jsx'
@@ -61,6 +63,23 @@ function BusinessListingPage() {
               </a>
             </Text>
           </Box>
+          {!isLoading && <Rating safetyData={business} />}
+          <Heading as="h2" mt="6" size="lg" letterSpacing={'tighter'}>
+            Reliability Score:
+          </Heading>
+          {!isLoading && (
+            <ReliabilityScore
+              reliabilityPositive={business.reliability_positive}
+              reliabilityNegative={business.reliability_negative}
+            />
+          )}
+          {!isLoading && (
+            <UserVoting
+              reliabilityPositive={business.reliability_positive}
+              reliabilityNegative={business.reliability_negative}
+              id={business.id}
+            />
+          )}
         </>
       )}
     </>
