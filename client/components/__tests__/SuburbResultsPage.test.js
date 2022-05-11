@@ -63,8 +63,10 @@ describe('<SuburbResultsPage />', () => {
       )
     })
     expect.assertions(2)
-    expect(screen.getByRole('heading')).toHaveTextContent('Listings for')
-    expect(screen.getByRole('heading')).not.toHaveTextContent('Weird Words')
+    expect(screen.getAllByRole('heading')[0]).toHaveTextContent('Listings for')
+    expect(screen.getAllByRole('heading')[0]).not.toHaveTextContent(
+      'Weird Words'
+    )
   })
   it('renders a map', async () => {
     await act(async () => {

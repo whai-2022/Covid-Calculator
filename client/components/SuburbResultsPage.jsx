@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { Heading, Flex, Box } from '@chakra-ui/react'
+import { Heading, SimpleGrid, Container, Center } from '@chakra-ui/react'
 
 import BusinessList from './BusinessList'
 import MapContainer from './MapContainer'
 import CategorySelector from './CategorySelector'
+import PhoneSelectIcon from './PhoneSelectIcon'
 import { setError } from '../actions'
 
 import api from '../apis'
@@ -48,24 +49,45 @@ function SuburbResultsPage() {
   return (
     <>
       <Heading
+        marginTop="50"
         as="h1"
-        size="lg"
+        size="xl"
         mb="10"
-        letterSpacing={'tighter'}
         textAlign="center"
-        color="gray.700"
+        color="blue.900"
       >
         Listings for {formatLocationName(suburb)}, {formatLocationName(city)}
       </Heading>
-      <Flex justifyContent="space-evenly">
-        <Box colSpan={2} justifyItems={'center'}>
-          {location && <MapContainer w="100%" location={location} />}
-        </Box>
-        <Box>
+      <SimpleGrid
+        minChildWidth="500px"
+        columns={2}
+        spacingY={10}
+        marginTop={10}
+      >
+        <Container colSpan={2} centerContent>
+          {location && <MapContainer w="500px" location={location} />}
+          <Center>
+            <Container
+              marginTop="50px"
+              padding="50px"
+              w="600px"
+              centerContent
+              borderWidth="1px"
+              borderRadius="lg"
+              shadow="md"
+            >
+              <Heading marginBottom="20px" color="blue.900">
+                Select a business to see more safety information
+              </Heading>
+              <PhoneSelectIcon />
+            </Container>
+          </Center>
+        </Container>
+        <Container w="400px" centerContent>
           <CategorySelector handleCategoryChange={handleCategoryChange} />
           <BusinessList businessCategory={businessCategory} />
-        </Box>
-      </Flex>
+        </Container>
+      </SimpleGrid>
     </>
   )
 }

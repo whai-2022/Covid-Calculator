@@ -6,30 +6,37 @@ import {
   Link,
   Flex,
   Icon,
-  AspectRatio,
-  Img,
   Avatar,
   Center,
 } from '@chakra-ui/react'
 import { FiArrowUpRight } from 'react-icons/fi'
 import { Link as RouterLink } from 'react-router-dom'
+import HomeIcon from './HomeIcon'
 
 function HomeSplash() {
   return (
     <>
-      <Box w="full" bg="blue.90" px="200px" py="60px" mb="120px">
-        <Flex justifyContent="space-between" alignItems="center" pb="60px">
-          <Heading
-            as="h1"
-            size="lg"
-            letterSpacing={'tighter'}
-            color="blue.900"
-            pb="50px"
-          >
-            Wherever you are, find a safe space to enjoy...
+      <Heading
+        px="200px"
+        py="60px"
+        size="2xl"
+        as="h1"
+        color="blue.900"
+        alignItems="center"
+        marginBottom="-80px"
+      >
+        Covid Calculator
+      </Heading>
+      <Box w="full" bg="blue.90" px="200px" py="60px">
+        <Flex justifyContent="space-between" alignItems="center">
+          <Heading as="h1" size="lg" color="blue.900" marginBottom="10px">
+            Wherever you are, whoever you are with, find a safe space to
+            enjoy...
           </Heading>
+        </Flex>
 
-          <Box maxW="300px">
+        <Box>
+          <Box maxW="600px">
             <Text color="blue.900" pb="20px">
               As we return to normal life, you can now choose a business based
               on its covid safety rating. We have used a clever set of
@@ -41,13 +48,22 @@ function HomeSplash() {
               <Icon as={FiArrowUpRight} ml="10px" h={5} w={5} />
             </Link>
           </Box>
-        </Flex>
-        <AspectRatio w="full" ratio={16 / 9} mb="-200px">
-          <Img src="/images/vector_masked_cafe.svg" pb="60px" />
-        </AspectRatio>
+          <HomeIcon></HomeIcon>
+        </Box>
       </Box>
       <Center>
-        <Box w="70%" px="40px" py="20px" bg="white">
+        <Box
+          w="70%"
+          h="100%"
+          px="40px"
+          py="20px"
+          bg="white"
+          p="5"
+          borderWidth="1px"
+          borderRadius="lg"
+          mb="16px"
+          shadow="lg"
+        >
           <Flex alignItems="center" pb="20px">
             <Avatar src="https://bit.ly/dan-abramov" mr="20px"></Avatar>
             <Box>

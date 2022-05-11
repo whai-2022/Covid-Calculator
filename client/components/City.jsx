@@ -29,7 +29,7 @@ function City() {
   function createList(cityData) {
     return (
       <>
-        <Heading as="h2" size="xl" letterSpacing={'tighter'}>
+        <Heading as="h2" size="xl" color="blue.900" letterSpacing={'tighter'}>
           {cityData}
         </Heading>
         <UnorderedList padding={5}>
@@ -56,9 +56,7 @@ function City() {
       <Box key={currentCity} padding={5}>
         {createList(currentCity)}
       </Box>
-      {/* <AspectRatio ratio={1}>*/}
       <Img src={`/images/${currentCity}.jpeg`} borderRadius="60px" w="50%" />
-      {/* </AspectRatio> */}
     </Flex>
   )
 }

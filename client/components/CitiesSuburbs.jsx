@@ -6,12 +6,12 @@ import {
   UnorderedList,
   ListItem,
   Box,
-  Img,
-  Center,
+  HStack,
   Link,
 } from '@chakra-ui/react'
 
 import locations from '../data/locations.json'
+import PhoneIcon from './PhoneIcon'
 
 function CitiesSuburbs() {
   function createCities() {
@@ -82,11 +82,17 @@ function CitiesSuburbs() {
         >
           Cities and Suburbs
         </Heading>
+
         {createCities()}
+        <Box maxW="900px">
+          <HStack>
+            <PhoneIcon />
+            <Heading color="blue.900">
+              Select a city or suburb to find safe businesses nearby
+            </Heading>
+          </HStack>
+        </Box>
       </Box>
-      <Center>
-        <Img src="/images/vector_map_results.svg" pb="30px" w="40%" mt="-120" />
-      </Center>
     </>
   )
 }

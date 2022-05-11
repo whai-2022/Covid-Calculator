@@ -38,12 +38,12 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
 
   return (
     <HStack color="blue.900">
-      <span>This was my experience</span>
+      <span>Yes, this was my experience</span>
       <Tag
         p={3}
         size={'sm'}
         variant={'solid'}
-        colorScheme={'telegram'}
+        colorScheme="telegram"
         opacity={'0.8'}
         cursor={'pointer'}
         onClick={() => handlePositiveSubmit(id)}
@@ -82,7 +82,7 @@ function UserVoting({ reliabilityPositive, reliabilityNegative, id }) {
           value={reliabilityNegative}
         />
       </Tag>
-      <span>{`This wasn't my experience`}</span>
+      <span>{`No, this was not my experience`}</span>
     </HStack>
   )
 }
