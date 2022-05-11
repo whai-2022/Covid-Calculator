@@ -6,7 +6,9 @@ import {
   Flex,
   Text,
   useDisclosure,
+  Icon,
 } from '@chakra-ui/react'
+import { BsCalculator } from 'react-icons/bs'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import Auth0Login from './Auth0Login'
 import { Link } from 'react-router-dom'
@@ -26,6 +28,9 @@ function Navbar() {
       color="gray.200"
     >
       <Flex align="center" mr={5}>
+        <Link to="/">
+          <Icon as={BsCalculator} color="blue.200" h={10} w={10} mr="12px" />
+        </Link>
         <Heading as="h1" size="lg" letterSpacing={'tighter'}>
           <Link to="/">Covid Calculator</Link>
         </Heading>
