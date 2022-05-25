@@ -1,5 +1,6 @@
 import React from 'react'
 import { Provider } from 'react-redux'
+import { MemoryRouter as Router } from 'react-router-dom'
 import { screen, render } from '@testing-library/react'
 
 import BusinessListingPage from '../BusinessListingPage'
@@ -17,12 +18,14 @@ describe('<BusinessListingPage/>', () => {
   it('renders the h1 title', () => {
     render(
       <Provider store={fakeStore}>
-        <BusinessListingPage />
+        <Router>
+          <BusinessListingPage />
+        </Router>
       </Provider>
     )
     expect.assertions(2)
-    expect(screen.getAllByRole('heading')[0]).toHaveTextContent('Business page')
-    expect(screen.getAllByRole('heading')[0]).not.toHaveTextContent(
+    expect(screen.getAllByRole('heading')[1]).toHaveTextContent('Address')
+    expect(screen.getAllByRole('heading')[1]).not.toHaveTextContent(
       'Weird No Words'
     )
   })

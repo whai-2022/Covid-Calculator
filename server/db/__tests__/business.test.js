@@ -16,9 +16,9 @@ afterAll(() => {
   return testDb.destroy()
 })
 
-describe('getBusinessById', () => {
+describe('getBusinessAndSafetyInfoById', () => {
   it('should return a business object', () => {
-    return db.getBusinessById(1, testDb).then((business) => {
+    return db.getBusinessAndSafetyInfoById(1, testDb).then((business) => {
       expect(business).toHaveProperty('handSanitizer')
       expect(business).toHaveProperty('rating')
       expect(business.name).toContain("Sharon's Hairdressing")

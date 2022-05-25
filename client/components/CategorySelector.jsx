@@ -20,7 +20,7 @@ function CategorySelector(props) {
       data-testid="select"
       onChange={props.handleCategoryChange}
       variant="filled"
-      bg="teal.100"
+      bg="blue.100"
       placeholder="Choose a category"
       mb="16px"
     >
