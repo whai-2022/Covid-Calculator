@@ -38,7 +38,7 @@ export default function SmallWithSocial() {
   return (
     <Box
       bg={useColorModeValue('blue.50')}
-      color={useColorModeValue('teal.500')}
+      color={useColorModeValue('blue.900')}
     >
       <Container
         as={Stack}
@@ -49,7 +49,7 @@ export default function SmallWithSocial() {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}
       >
-        <Text>© 2022 Chakra Templates. All rights reserved</Text>
+        <Text>© 2022 Covid Calculator. All rights reserved</Text>
         <Stack direction={'row'} spacing={6}>
           <SocialButton label={'Twitter'} href={'#'}>
             <FaTwitter />

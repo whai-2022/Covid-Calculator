@@ -6,7 +6,9 @@ import {
   Flex,
   Text,
   useDisclosure,
+  Icon,
 } from '@chakra-ui/react'
+import { BsCalculator } from 'react-icons/bs'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import Auth0Login from './Auth0Login'
 import { Link } from 'react-router-dom'
@@ -22,12 +24,15 @@ function Navbar() {
       justify="space-between"
       wrap="wrap"
       padding={6}
-      bg="blue.50"
-      color="teal.500"
+      bg="blue.900"
+      color="gray.200"
     >
       <Flex align="center" mr={5}>
+        <Link to="/">
+          <Icon as={BsCalculator} color="blue.200" h={10} w={10} mr="12px" />
+        </Link>
         <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-          Covid Calculator
+          <Link to="/">Covid Calculator</Link>
         </Heading>
       </Flex>
       <Box display={{ base: 'block', md: 'none' }} onClick={handleToggle}>

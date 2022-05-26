@@ -1,6 +1,5 @@
 import api from '../apis'
-
-import { getBusinesses } from '../actions'
+import { setError, getBusinesses } from './index'
 
 export function setRating(id, score) {
   return (dispatch) => {
@@ -11,6 +10,7 @@ export function setRating(id, score) {
         return null
       })
       .catch((err) => {
+        dispatch(setError(err.message))
         console.log(err)
       })
   }

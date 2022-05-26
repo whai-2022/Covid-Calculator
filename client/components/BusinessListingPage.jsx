@@ -3,15 +3,20 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import {
   Box,
+  Badge,
   Heading,
-  Flex,
   Text,
-  UnorderedList,
-  ListItem,
+  Container,
+  SimpleGrid,
 } from '@chakra-ui/react'
-import Rating from './Rating'
+import RatingScore from './RatingScore'
 import ReliabilityScore from './ReliabilityScore'
+import SafetyInfo from './SafetyInfo'
+import UserVoting from './UserVoting'
+
 import { fetchBusiness } from '../actions'
+
+import SafetyInfoExplanation from './SafetyInfoExplanation'
 
 function BusinessListingPage() {
   const dispatch = useDispatch()
@@ -19,7 +24,6 @@ function BusinessListingPage() {
   const [isLoading, setIsLoading] = useState(false)
 
   const business = useSelector((state) => state.business)
-  console.log(business)
 
   useEffect(() => {
     setIsLoading(true)
@@ -29,43 +33,102 @@ function BusinessListingPage() {
 
   return (
     <>
-      <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" letterSpacing={'tighter'}>
-          Business page{' '}
-        </Heading>
-      </Flex>{' '}
+      <Heading
+        color="blue.900"
+        as="h1"
+        size="2xl"
+        mb="10"
+        textAlign="center"
+        mt="20"
+      >
+        {business.name}
+      </Heading>
+      <Container centerContent>
+        <Badge borderRadius="full" px="2" colorScheme="blue" mt="-7" mb="10">
+          <Text fontSize="md">{business.category}</Text>
+        </Badge>
+      </Container>
       {!isLoading && (
         <>
+          <Container
+            maxW="2xl"
+            borderWidth="1px"
+            borderRadius="lg"
+            mb="16px"
+            w="100%"
+            shadow="sm"
+          >
+            <Box display={{ base: 'block' }} m={5}>
+              <SimpleGrid
+                minChildWidth="250px"
+                columns={2}
+                spacingX={10}
+                marginTop={10}
+              >
+                <Box mb="16px" w="100%" p={3}>
+                  <Heading as="h2" size="md">
+                    {'Address'}
+                  </Heading>
+                  <Text>{business.address}</Text>
+                </Box>
+                <Box>
+                  <Box>
+                    Rating: <RatingScore score={business.rating} />
+                  </Box>
+                  <Box>
+                    Reliability Score:{' '}
+                    <ReliabilityScore
+                      reliabilityPositive={business.reliabilityPositive}
+                      reliabilityNegative={business.reliabilityNegative}
+                    />{' '}
+                  </Box>
+                </Box>
+              </SimpleGrid>
+            </Box>
+          </Container>
           <Box display={{ base: 'block' }} m={5}>
-            <Text>Business info:</Text>
-            <UnorderedList>
-              <ListItem>{business.name}</ListItem>
-              <ListItem>{business.category}</ListItem>
-              <ListItem>{business.address}</ListItem>
-            </UnorderedList>
+            <SafetyInfo business={business} />
           </Box>
-          <Box display={{ base: 'block' }} m={5}>
-            <Text>Safety info:</Text>
-            <UnorderedList>
-              <ListItem>cleaningProtocol: {business.cleaningProtocol}</ListItem>
-              <ListItem>handSanitizer: {business.handSanitizer}</ListItem>
-              <ListItem>masking: {business.masking}</ListItem>
-              <ListItem>minSpacing: {business.minSpacing}</ListItem>
-              <ListItem>vaccinePass: {business.vaccinePass}</ListItem>
-              <ListItem>vaccineStaff: {business.vaccineStaff}</ListItem>
-              <ListItem>ventilation: {business.ventilation}</ListItem>
-            </UnorderedList>
+          <Container
+            maxW="5xl"
+            centerContent
+            borderWidth="1px"
+            borderRadius="50"
+            mb="16px"
+            w="100%"
+            paddingTop="50px"
+            paddingBottom="50px"
+            backgroundColor="blue.50"
+            marginTop="50px"
+            shadow="md"
+          >
+            <Text fontSize="xl" marginBottom="10px">
+              Help us keep this information accurate
+            </Text>
+            <Text marginBottom="10">
+              Does this information reflect your most recent experience at this
+              business?
+            </Text>
+            {!isLoading && (
+              <UserVoting
+                reliabilityPositive={business.reliability_positive}
+                reliabilityNegative={business.reliability_negative}
+                id={business.id}
+              />
+            )}
+          </Container>
+          <Box marginTop={10}>
+            <SafetyInfoExplanation display={{ base: 'block' }} m={5} />
           </Box>
-          {!isLoading && <Rating safetyData={business} />}
-          <Heading as="h2" mt="6" size="lg" letterSpacing={'tighter'}>
-            Reliability Score:
-          </Heading>
-          {!isLoading && (
-            <ReliabilityScore
-              reliabilityPositive={business.reliability_positive}
-              reliabilityNegative={business.reliability_negative}
-            />
-          )}
+          <Box>
+            <Text>
+              * Rating calculations are estimated according to data points found
+              on{' '}
+              <a href="https://www.microcovid.org/" color="blue.200">
+                https://www.microcovid.org/
+              </a>
+            </Text>
+          </Box>
         </>
       )}
     </>

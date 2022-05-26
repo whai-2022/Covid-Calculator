@@ -1,4 +1,5 @@
 import api from '../apis'
+import { setError } from './index'
 
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS'
 
@@ -18,6 +19,7 @@ export function fetchBusiness(id) {
         return null
       })
       .catch((err) => {
+        dispatch(setError(err.message))
         console.log(err)
       })
   }

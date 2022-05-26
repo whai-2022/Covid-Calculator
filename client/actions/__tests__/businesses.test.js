@@ -1,4 +1,4 @@
-import { getBusinesses, RECEIVE_BUSINESSES, SET_ERROR } from '../businesses'
+import { getBusinesses, RECEIVE_BUSINESSES, SET_ERROR } from '../index'
 import api from '../../apis'
 import { testBusinesses } from '../../../__mockData__/businesses'
 

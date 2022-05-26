@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
-import { Badge, Heading, Box, Center, Text } from '@chakra-ui/react'
+import { Link as RouterLink } from 'react-router-dom'
+import { Badge, Heading, Box, Center, Text, Link } from '@chakra-ui/react'
 import RatingScore from './RatingScore'
 import ReliabilityScore from './ReliabilityScore'
 
@@ -12,39 +12,35 @@ function BusinessDetail({
   reliabilityPositive,
   reliabilityNegative,
   rating,
+  showDetails,
 }) {
-  console.log(
-    id,
-    name,
-    address,
-    category,
-    reliabilityPositive,
-    reliabilityNegative,
-    rating
-  )
   return (
     <Center>
-      <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="100%">
-        <Link to={`/businesses/${id}/`}>
+      <Box p="5" borderWidth="1px" borderRadius="lg" mb="16px" w="400px">
+        <Link as={RouterLink} to={`/businesses/${id}`}>
           <Heading as="h2" size="md">
-            {name}
+            {showDetails ? name : 'Info:'}
           </Heading>
         </Link>
         <Text>{address}</Text>
-        <Text fontSize="md">
+        <Box>
           Rating: <RatingScore score={rating} />
-        </Text>
-        <Text>
+        </Box>
+        <Box>
           Reliability Score:{' '}
           <ReliabilityScore
             reliabilityPositive={reliabilityPositive}
             reliabilityNegative={reliabilityNegative}
           />{' '}
-        </Text>
-        <Text fontSize="md">
-          <Link to={`/businesses/${id}/`}>See details</Link>
-        </Text>
-        <Badge borderRadius="full" px="2" colorScheme="teal">
+        </Box>
+        {showDetails && (
+          <Text fontSize="md">
+            <Link as={RouterLink} to={`/businesses/${id}`}>
+              See details
+            </Link>
+          </Text>
+        )}
+        <Badge borderRadius="full" px="2" colorScheme="blue">
           {category}
         </Badge>
       </Box>
