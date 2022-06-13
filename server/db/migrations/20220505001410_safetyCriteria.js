@@ -3,11 +3,13 @@
  * @returns { Promise<void> }
  */
 exports.up = function (knex) {
-  return knex.schema.createTable('safetyCriteria', (table) => {
+  return knex.schema.createTable('safety_criteria', (table) => {
     table.increments().primary()
     table
-      .string('business_id')
-      .references('business.id')
+      .integer('business_id')
+      .unsigned()
+      .references('id')
+      .inTable('businesses')
       .onUpdate('CASCADE')
       .onDelete('CASCADE')
     table.integer('ventilation')
@@ -25,5 +27,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  return knex.schema.dropTable('safetyCriteria')
+  return knex.schema.dropTable('safety_criteria')
 }

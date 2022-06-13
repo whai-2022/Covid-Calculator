@@ -8,6 +8,8 @@ Covid Calculator is an app that lets you know how safe a business is based on co
 
 This was our final project for Dev Academy's Web Development Bootcamp. You can see a [video of our presentation of this app](https://www.youtube.com/watch?v=THQNXGFnZdg), and there are some more screenshots of the app in the ['Visuals'](https://github.com/whai-2022/Covid-Calculator/tree/main#visuals) section below.
 
+Visit our app demo [here](https://covid-calculator-whai22.herokuapp.com/).
+
 ## The Team
 
 We designed and built this app as a distributed team of four using using agile methodologies and collaborating remotely. A lot of the code was written through pair programming (also done remotely). In addition to coding, we all took on other team roles:
