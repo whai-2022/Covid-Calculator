@@ -5,8 +5,10 @@ import {
   UnorderedList,
   ListItem,
   Box,
-  Flex,
   Img,
+  Wrap,
+  WrapItem,
+  Center,
 } from '@chakra-ui/react'
 
 import locations from '../data/locations.json'
@@ -52,12 +54,22 @@ function City() {
   }
 
   return (
-    <Flex justifyContent="space-evenly">
-      <Box key={currentCity} padding={5}>
-        {createList(currentCity)}
-      </Box>
-      <Img src={`/images/${currentCity}.jpeg`} borderRadius="60px" w="50%" />
-    </Flex>
+    <Center>
+      <Wrap justify="center" spacing={10}>
+        <WrapItem>
+          <Box key={currentCity} padding={5}>
+            {createList(currentCity)}
+          </Box>
+        </WrapItem>
+        <WrapItem>
+          <Img
+            src={`/images/${formatName(currentCity)}.jpeg`}
+            borderRadius="60px"
+            w={{ base: '700px', xl: '800px' }}
+          />
+        </WrapItem>
+      </Wrap>
+    </Center>
   )
 }
 
