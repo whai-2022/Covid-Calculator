@@ -7,9 +7,9 @@ module.exports = {
 function getBusinessAndSafetyInfoById(id, db = connection) {
   return db('businesses')
     .where('businesses.id', id)
-    .join('safetyCriteria', 'businesses.id', 'safetyCriteria.business_id')
+    .join('safety_criteria', 'businesses.id', 'safety_criteria.business_id')
     .select(
-      'safetyCriteria.*',
+      'safety_criteria.*',
       'businesses.*',
       'reliability_positive as reliabilityPositive',
       'reliability_negative as reliabilityNegative'
