@@ -6,7 +6,7 @@ exports.up = function (knex) {
   return knex.schema.createTable('safetyCriteria', (table) => {
     table.increments().primary()
     table
-      .string('business_id')
+      .varchar('business_id')
       .references('businesses.id')
       .onUpdate('CASCADE')
       .onDelete('CASCADE')
