@@ -21,7 +21,7 @@
     "prettier": "prettier --write server client"
   },
   "engines": {
-    "node": "16.x"
+    "node": "14.x"
   },
   "keywords": [
     "fullstack"
