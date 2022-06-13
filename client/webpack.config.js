@@ -1,14 +1,7 @@
 const webpack = require('webpack')
-const dotenv = require('dotenv')
+require('dotenv').config()
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-
-const env = dotenv.config().parsed
-// reduce it to a nice object, the same as before
-const envKeys = Object.keys(env).reduce((prev, next) => {
-  prev[`process.env.${next}`] = JSON.stringify(env[next])
-  return prev
-}, {})
 
 module.exports = {
   entry: ['./client/index.js'],
@@ -23,7 +16,11 @@ module.exports = {
       chunkFilename: '[id].css',
       ignoreOrder: false, // Enable to remove warnings about conflicting order
     }),
-    new webpack.DefinePlugin(envKeys),
+    new webpack.DefinePlugin({
+      'process.env.REACT_APP_MAPBOX_ACCESS_TOKEN': JSON.stringify(
+        process.env.REACT_APP_MAPBOX_ACCESS_TOKEN
+      ),
+    }),
   ],
   module: {
     rules: [
