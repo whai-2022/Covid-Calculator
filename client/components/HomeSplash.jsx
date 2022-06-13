@@ -65,10 +65,13 @@ function HomeSplash() {
           shadow="lg"
         >
           <Flex alignItems="center" pb="20px">
-            <Avatar src="https://bit.ly/dan-abramov" mr="20px"></Avatar>
+            <Avatar
+              src="/images/avatar-7aabc1193beb0f5d7341a9e8f8493ef2.jpg"
+              mr="20px"
+            ></Avatar>
             <Box>
               <Heading fontSize={16} color="blue.900" mb="2px">
-                Dan Abramov
+                Leah Goodchild
               </Heading>
               <Text fontSize={12} color="gray.500">
                 Visited the Grey Lynn Community
