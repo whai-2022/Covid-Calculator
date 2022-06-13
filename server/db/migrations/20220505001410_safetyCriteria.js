@@ -7,7 +7,7 @@ exports.up = function (knex) {
     table.increments().primary()
     table
       .string('business_id')
-      .references('business.id')
+      .references('businesses.id')
       .onUpdate('CASCADE')
       .onDelete('CASCADE')
     table.integer('ventilation')
